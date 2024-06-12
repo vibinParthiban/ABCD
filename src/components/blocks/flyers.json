@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_blocks_flyers",
+  "info": {
+    "displayName": "Flyers",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "textname": {
+      "type": "string"
+    },
+    "textvalue": {
+      "type": "string"
+    },
+    "imagesrc": {
+      "type": "string"
+    },
+    "imagename": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "collectionName": "components_blocks_video_carousels",
+  "info": {
+    "displayName": "video-carousel",
+    "icon": "play"
+  },
+  "options": {},
+  "attributes": {
+    "url": {
+      "type": "text"
+    },
+    "name": {
+      "type": "string"
+    },
+    "displayName": {
+      "type": "string"
+    },
+    "YoutubeID": {
+      "type": "string"
+    },
+    "PosterImage": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.image"
+    },
+    "Background": {
+      "type": "string"
+    },
+    "Heading": {
+      "type": "string"
+    },
+    "Subheading": {
+      "type": "text"
+    },
+    "Address": {
+      "type": "text"
+    },
+    "AuthorName": {
+      "type": "string"
+    },
+    "AuthorTitle": {
+      "type": "string"
+    },
+    "AuthorImage": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.image"
+    },
+    "EntryDate": {
+      "type": "datetime"
+    },
+    "ShowInCarousel": {
+      "type": "boolean",
+      "default": false
+    }   
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_blocks_prod_sub_categories",
+  "info": {
+    "displayName": "ProdSubCategory"
+  },
+  "options": {},
+  "attributes": {
+    "typename": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.title"
+    },
+    "primaryCTAButton": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.cta"
+    },
+    "secondaryCTAButton": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.cta"
+    },
+    "accordionClass": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.field-type"
+    }
+  }
+}

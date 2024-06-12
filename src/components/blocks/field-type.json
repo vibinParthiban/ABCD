@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_blocks_field_types",
+  "info": {
+    "displayName": "FieldType",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "dataType": {
+      "type": "string"
+    },
+    "value": {
+      "type": "string"
+    }
+  }
+}

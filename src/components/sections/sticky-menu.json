@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_sections_sticky_menus",
+  "info": {
+    "displayName": "StickyMenu"
+  },
+  "options": {},
+  "attributes": {
+    "menuItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.sticky-menu-item"
+    }
+  }
+}

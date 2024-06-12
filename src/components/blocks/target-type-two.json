@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_blocks_target_type_twos",
+  "info": {
+    "displayName": "TargetTypeTwo"
+  },
+  "options": {},
+  "attributes": {
+    "typename": {
+      "type": "string"
+    },
+    "type": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.field-type"
+    }
+  }
+}

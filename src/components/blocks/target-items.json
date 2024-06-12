@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_blocks_target_items",
+  "info": {
+    "displayName": "targetItems"
+  },
+  "options": {},
+  "attributes": {
+    "typename": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "productName": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.field-type"
+    },
+    "productType": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.field-type"
+    },
+    "icon": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.field-type"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.cta"
+    }
+  }
+}

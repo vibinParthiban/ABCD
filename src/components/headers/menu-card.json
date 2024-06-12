@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_headers_menu_cards",
+  "info": {
+    "displayName": "menuCard"
+  },
+  "options": {},
+  "attributes": {
+    "menuTitle": {
+      "type": "string"
+    },
+    "menuSubTitle": {
+      "type": "text"
+    },
+    "url": {
+      "type": "text"
+    },
+    "icon": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.icon"
+    }
+  }
+}

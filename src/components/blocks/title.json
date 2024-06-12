@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_blocks_titles",
+  "info": {
+    "displayName": "title",
+    "icon": "strikeThrough",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "blocks"
+    },
+    "subheading": {
+      "type": "text"
+    },
+    "cssclass": {
+      "type": "string"
+    },
+    "typename": {
+      "type": "string"
+    }
+  }
+}

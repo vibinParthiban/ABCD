@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_blocks_ctas",
+  "info": {
+    "displayName": "CTA",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "href": {
+      "type": "text"
+    },
+    "text": {
+      "type": "string"
+    },
+    "linktype": {
+      "type": "string"
+    },
+    "url": {
+      "type": "text"
+    },
+    "anchor": {
+      "type": "text"
+    },
+    "title": {
+      "type": "text"
+    },
+    "class": {
+      "type": "string"
+    },
+    "typename": {
+      "type": "string"
+    }
+  }
+}

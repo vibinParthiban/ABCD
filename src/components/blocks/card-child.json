@@ -1,0 +1,47 @@
+{
+  "collectionName": "components_blocks_card_children",
+  "info": {
+    "displayName": "CardChild"
+  },
+  "options": {},
+  "attributes": {
+    "typename": {
+      "type": "string"
+    },
+    "productName": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.field-type"
+    },
+    "productDescription": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.field-type"
+    },
+    "primaryCTAButton": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.cta"
+    },
+    "secondaryCTAButton": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.cta"
+    },
+    "posterImage": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.image"
+    },
+    "background": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.field-type"
+    },
+    "swiperClass": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.field-type"
+    }
+  }
+}

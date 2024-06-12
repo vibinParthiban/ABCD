@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_blocks_sticky_menu_items",
+  "info": {
+    "displayName": "StickyMenuItem",
+    "icon": "layer"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.label"
+    },
+    "icon": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.icon"
+    },
+    "iconSecond": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.icon"
+    },
+    "CTA": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.cta"
+    }
+  }
+}

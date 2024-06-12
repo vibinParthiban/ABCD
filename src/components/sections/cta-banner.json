@@ -1,0 +1,43 @@
+{
+  "collectionName": "components_sections_cta_banners",
+  "info": {
+    "displayName": "CTABanner",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "heading1": {
+      "type": "string"
+    },
+    "heading2": {
+      "type": "string"
+    },
+    "subheading": {
+      "type": "text"
+    },
+    "metaversebg": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.image"
+    },
+    "knowmorebtntext": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.cta"
+    },
+    "cssclass": {
+      "type": "string"
+    },
+    "metaversebgMobile": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.image"
+    },
+    "modalTitle": {
+      "type": "text"
+    },
+    "modalSubTitle": {
+      "type": "text"
+    }
+  }
+}

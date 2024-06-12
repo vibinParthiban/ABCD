@@ -1,0 +1,59 @@
+{
+  "collectionName": "components_blocks_card_parents",
+  "info": {
+    "displayName": "CardParent"
+  },
+  "options": {},
+  "attributes": {
+    "tabName": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.field-type"
+    },
+    "leftIcon": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.field-type"
+    },
+    "heading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.field-type"
+    },
+    "subheading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.field-type"
+    },
+    "primaryCTAButton": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.cta"
+    },
+    "secondaryCTAButton": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.cta"
+    },
+    "accordionClass": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.field-type"
+    },
+    "flyers": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.flyers"
+    },
+    "recommendedForYou":{
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.prod-recommendation"
+    },
+    "children":{
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.card-child"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_blocks_i_frames",
+  "info": {
+    "displayName": "iFrame",
+    "icon": "link"
+  },
+  "options": {},
+  "attributes": {
+    "iframeUrl": {
+      "type": "text"
+    }
+  }
+}

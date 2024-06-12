@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_sections_branch_locators",
+  "info": {
+    "displayName": "BranchLocators",
+    "icon": "pinMap"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.title",
+      "required": true
+    },
+    "iframeUrl": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.i-frame"
+    }
+  }
+}

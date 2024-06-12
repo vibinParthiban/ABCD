@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_sections_finance_solutions",
+  "info": {
+    "displayName": "FinanceSolution"
+  },
+  "options": {},
+  "attributes": {
+    "typename": {
+      "type": "string"
+    },
+    "header":{
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.title"
+    },
+    "cardParent": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.card-parent"
+    },
+    "tabName": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.field-type"
+    },
+    "headline": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.field-type"
+    },
+    "cssClass": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.field-type"
+    }
+  }
+}
