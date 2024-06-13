@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_footers_footer_tabs",
+  "info": {
+    "displayName": "FooterTabs"
+  },
+  "options": {},
+  "attributes": {
+    "menuTitle": {
+      "type": "string"
+    },
+    "menuLink": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_footers_companies",
+  "info": {
+    "displayName": "companies",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "companyName": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}
