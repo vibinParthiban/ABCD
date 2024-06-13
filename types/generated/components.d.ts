@@ -245,6 +245,114 @@ export interface BlocksVideoCarousel extends Schema.Component {
   };
 }
 
+export interface FootersCompanies extends Schema.Component {
+  collectionName: 'components_footers_companies';
+  info: {
+    displayName: 'companies';
+    description: '';
+  };
+  attributes: {
+    companyName: Attribute.String;
+    icon: Attribute.String;
+    link: Attribute.String;
+  };
+}
+
+export interface FootersFollowComp extends Schema.Component {
+  collectionName: 'components_footers_follow_comps';
+  info: {
+    displayName: 'FollowComp';
+  };
+  attributes: {
+    menuTitle: Attribute.String;
+    menuLink: Attribute.String;
+    menuIcon: Attribute.String;
+  };
+}
+
+export interface FootersFollowParent extends Schema.Component {
+  collectionName: 'components_footers_follow_parents';
+  info: {
+    displayName: 'FollowParent';
+  };
+  attributes: {
+    displayName: Attribute.String;
+    children: Attribute.Component<'footers.follow-comp', true>;
+  };
+}
+
+export interface FootersFooterInfo extends Schema.Component {
+  collectionName: 'components_footers_footer_infos';
+  info: {
+    displayName: 'FooterInfo';
+  };
+  attributes: {
+    Logo: Attribute.String;
+    LogoCTA: Attribute.String;
+    Icon: Attribute.String;
+    TollText: Attribute.String;
+    IconCTA: Attribute.Component<'footers.icon-and-url'>;
+    Address: Attribute.Blocks;
+    WarningText: Attribute.Blocks;
+    RedRibonText: Attribute.Blocks;
+    SubsidiariesTitle: Attribute.String;
+    DownloadText: Attribute.String;
+    DownloadIcon: Attribute.String;
+    AppStore: Attribute.Component<'footers.icon-and-url'>;
+    AppStoreIcon: Attribute.String;
+    PlayStore: Attribute.Component<'footers.icon-and-url'>;
+    PlayStoreIcon: Attribute.String;
+  };
+}
+
+export interface FootersFooterTabs extends Schema.Component {
+  collectionName: 'components_footers_footer_tabs';
+  info: {
+    displayName: 'FooterTabs';
+  };
+  attributes: {
+    menuTitle: Attribute.String;
+    menuLink: Attribute.String;
+  };
+}
+
+export interface FootersIconAndUrl extends Schema.Component {
+  collectionName: 'components_footers_icon_and_urls';
+  info: {
+    displayName: 'IconAndURL';
+    description: '';
+  };
+  attributes: {
+    text: Attribute.String;
+    url: Attribute.String;
+  };
+}
+
+export interface FootersTabPrimary extends Schema.Component {
+  collectionName: 'components_footers_tab_primaries';
+  info: {
+    displayName: 'TabPrimary';
+  };
+  attributes: {
+    menuTitle: Attribute.String;
+    menuLink: Attribute.String;
+    menuIcon: Attribute.String;
+    mobileOnly: Attribute.String;
+    tabs: Attribute.Component<'footers.footer-tabs', true>;
+  };
+}
+
+export interface FootersTabsComp extends Schema.Component {
+  collectionName: 'components_footers_tabs_comps';
+  info: {
+    displayName: 'TabsComp';
+  };
+  attributes: {
+    name: Attribute.String;
+    primary: Attribute.Component<'footers.tab-primary', true>;
+  };
+}
+
 export interface HeadersMenuCard extends Schema.Component {
   collectionName: 'components_headers_menu_cards';
   info: {
@@ -346,6 +454,14 @@ declare module '@strapi/types' {
       'blocks.target-type-two': BlocksTargetTypeTwo;
       'blocks.title': BlocksTitle;
       'blocks.video-carousel': BlocksVideoCarousel;
+      'footers.companies': FootersCompanies;
+      'footers.follow-comp': FootersFollowComp;
+      'footers.follow-parent': FootersFollowParent;
+      'footers.footer-info': FootersFooterInfo;
+      'footers.footer-tabs': FootersFooterTabs;
+      'footers.icon-and-url': FootersIconAndUrl;
+      'footers.tab-primary': FootersTabPrimary;
+      'footers.tabs-comp': FootersTabsComp;
       'headers.menu-card': HeadersMenuCard;
       'sections.branch-locators': SectionsBranchLocators;
       'sections.cta-banner': SectionsCtaBanner;

@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_footers_follow_parents",
+  "info": {
+    "displayName": "FollowParent"
+  },
+  "options": {},
+  "attributes": {
+    "displayName": {
+      "type": "string"
+    },
+    "children": {
+      "type": "component",
+      "repeatable": true,
+      "component": "footers.follow-comp"
+    }
+  }
+}
