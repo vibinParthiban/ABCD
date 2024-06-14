@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_headers_quick_service_cards",
+  "info": {
+    "displayName": "QuickServiceCard"
+  },
+  "options": {},
+  "attributes": {
+    "menuTitle": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.label"
+    },
+    "menuLink": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.label"
+    },
+    "menuIcon": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.icon"
+    },
+    "mobileOnly": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.mobile-only"
+    },
+    "QuickLinks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "headers.quick-link"
+    }
+  }
+}

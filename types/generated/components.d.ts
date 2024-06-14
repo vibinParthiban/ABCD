@@ -163,6 +163,29 @@ export interface BlocksLabel extends Schema.Component {
   };
 }
 
+export interface BlocksLink extends Schema.Component {
+  collectionName: 'components_blocks_links';
+  info: {
+    displayName: 'Link';
+    icon: 'link';
+  };
+  attributes: {
+    url: Attribute.Text;
+    text: Attribute.String;
+    linkType: Attribute.Enumeration<['internal', 'external']>;
+  };
+}
+
+export interface BlocksMobileOnly extends Schema.Component {
+  collectionName: 'components_blocks_mobile_onlies';
+  info: {
+    displayName: 'MobileOnly';
+  };
+  attributes: {
+    value: Attribute.Boolean & Attribute.DefaultTo<false>;
+  };
+}
+
 export interface BlocksProdRecommendation extends Schema.Component {
   collectionName: 'components_blocks_prod_recommendations';
   info: {
@@ -185,6 +208,18 @@ export interface BlocksProdSubCategory extends Schema.Component {
     primaryCTAButton: Attribute.Component<'blocks.cta'>;
     secondaryCTAButton: Attribute.Component<'blocks.cta'>;
     accordionClass: Attribute.Component<'blocks.field-type'>;
+  };
+}
+
+export interface BlocksQuickLink extends Schema.Component {
+  collectionName: 'components_blocks_quick_links';
+  info: {
+    displayName: 'QuickLink';
+    icon: 'link';
+  };
+  attributes: {
+    Label: Attribute.Component<'blocks.label'>;
+    Link: Attribute.Component<'blocks.link'>;
   };
 }
 
@@ -275,6 +310,42 @@ export interface BlocksVideoCarousel extends Schema.Component {
     AuthorImage: Attribute.Component<'blocks.image'>;
     EntryDate: Attribute.DateTime;
     ShowInCarousel: Attribute.Boolean & Attribute.DefaultTo<false>;
+  };
+}
+
+export interface HeadersClickableItem extends Schema.Component {
+  collectionName: 'components_headers_clickable_items';
+  info: {
+    displayName: 'ClickableItem';
+  };
+  attributes: {
+    Label: Attribute.Component<'blocks.label'>;
+    Icon: Attribute.Component<'blocks.icon'>;
+    CTA: Attribute.Component<'blocks.cta'>;
+    CssClass: Attribute.Component<'blocks.label'>;
+  };
+}
+
+export interface HeadersHeadRightSide extends Schema.Component {
+  collectionName: 'components_headers_head_right_sides';
+  info: {
+    displayName: 'headRightSide';
+  };
+  attributes: {
+    HeadRightItems: Attribute.Component<'headers.clickable-item', true>;
+  };
+}
+
+export interface HeadersLogo extends Schema.Component {
+  collectionName: 'components_headers_logos';
+  info: {
+    displayName: 'logo';
+    icon: 'picture';
+  };
+  attributes: {
+    CompanyName: Attribute.Component<'blocks.label'>;
+    Icon: Attribute.Component<'blocks.icon'>;
+    Link: Attribute.Component<'blocks.link'>;
   };
 }
 
@@ -399,6 +470,128 @@ export interface HeadersMenuCard extends Schema.Component {
   };
 }
 
+export interface HeadersMenuItem extends Schema.Component {
+  collectionName: 'components_headers_menu_items';
+  info: {
+    displayName: 'MenuItem';
+  };
+  attributes: {
+    menuTitle: Attribute.String;
+    menuLink: Attribute.Text;
+    menuIcon: Attribute.Text;
+    mobileOnly: Attribute.Boolean & Attribute.DefaultTo<false>;
+    CssClassName: Attribute.String;
+    menuTabs: Attribute.Component<'headers.menu-tabs', true>;
+  };
+}
+
+export interface HeadersMenuTabs extends Schema.Component {
+  collectionName: 'components_headers_menu_tabs';
+  info: {
+    displayName: 'MenuTabs';
+  };
+  attributes: {
+    menuTitle: Attribute.String;
+    menuLink: Attribute.Text;
+    viewAllLink: Attribute.Text;
+    CssId: Attribute.String;
+    yellowSubTab: Attribute.String;
+    menuCards: Attribute.Component<'headers.menu-card', true>;
+  };
+}
+
+export interface HeadersMenu extends Schema.Component {
+  collectionName: 'components_headers_menus';
+  info: {
+    displayName: 'MainMenu';
+  };
+  attributes: {
+    menuItems: Attribute.Component<'headers.menu-item', true>;
+  };
+}
+
+export interface HeadersQuickLink extends Schema.Component {
+  collectionName: 'components_headers_quick_link';
+  info: {
+    displayName: 'QuickLink';
+  };
+  attributes: {
+    QuickLink: Attribute.Component<'blocks.quick-link', true>;
+  };
+}
+
+export interface HeadersQuickServiceCard extends Schema.Component {
+  collectionName: 'components_headers_quick_service_cards';
+  info: {
+    displayName: 'QuickServiceCard';
+  };
+  attributes: {
+    menuTitle: Attribute.Component<'blocks.label'>;
+    menuLink: Attribute.Component<'blocks.label'>;
+    menuIcon: Attribute.Component<'blocks.icon'>;
+    mobileOnly: Attribute.Component<'blocks.mobile-only'>;
+    QuickLinks: Attribute.Component<'headers.quick-link', true>;
+  };
+}
+
+export interface HeadersQuickServices extends Schema.Component {
+  collectionName: 'components_headers_quick_services';
+  info: {
+    displayName: 'QuickServices';
+  };
+  attributes: {
+    QuickServiceCards: Attribute.Component<'headers.quick-service-card', true>;
+  };
+}
+
+export interface HeadersTopNavItem extends Schema.Component {
+  collectionName: 'components_headers_top_nav_items';
+  info: {
+    displayName: 'topNavItem';
+  };
+  attributes: {
+    displayName: Attribute.String;
+    menuTitle: Attribute.Component<'blocks.label'>;
+    menuIcon: Attribute.Component<'blocks.icon'>;
+    menuLink: Attribute.Component<'blocks.link'>;
+    mobileOnly: Attribute.Component<'blocks.mobile-only'>;
+    TopNavTabs: Attribute.Component<'headers.top-nav-tab', true>;
+  };
+}
+
+export interface HeadersTopNavLinks extends Schema.Component {
+  collectionName: 'components_headers_top_nav_links';
+  info: {
+    displayName: 'topNavLinks';
+  };
+  attributes: {
+    label: Attribute.Component<'blocks.label'>;
+    link: Attribute.Component<'blocks.link'>;
+  };
+}
+
+export interface HeadersTopNavTab extends Schema.Component {
+  collectionName: 'components_headers_top_nav_tabs';
+  info: {
+    displayName: 'topNavTab';
+  };
+  attributes: {
+    heading: Attribute.Component<'blocks.label'>;
+    TopNavLinks: Attribute.Component<'headers.top-nav-links', true>;
+  };
+}
+
+export interface HeadersTopNavigation extends Schema.Component {
+  collectionName: 'components_headers_top_navigations';
+  info: {
+    displayName: 'TopNavigation';
+  };
+  attributes: {
+    displayName: Attribute.String;
+    TopNavItems: Attribute.Component<'headers.top-nav-item', true>;
+  };
+}
+
 export interface SectionsBranchLocators extends Schema.Component {
   collectionName: 'components_sections_branch_locators';
   info: {
@@ -494,14 +687,20 @@ declare module '@strapi/types' {
       'blocks.image-carousel': BlocksImageCarousel;
       'blocks.image': BlocksImage;
       'blocks.label': BlocksLabel;
+      'blocks.link': BlocksLink;
+      'blocks.mobile-only': BlocksMobileOnly;
       'blocks.prod-recommendation': BlocksProdRecommendation;
       'blocks.prod-sub-category': BlocksProdSubCategory;
+      'blocks.quick-link': BlocksQuickLink;
       'blocks.sticky-menu-item': BlocksStickyMenuItem;
       'blocks.target-items-type-two': BlocksTargetItemsTypeTwo;
       'blocks.target-items': BlocksTargetItems;
       'blocks.target-type-two': BlocksTargetTypeTwo;
       'blocks.title': BlocksTitle;
       'blocks.video-carousel': BlocksVideoCarousel;
+      'headers.clickable-item': HeadersClickableItem;
+      'headers.head-right-side': HeadersHeadRightSide;
+      'headers.logo': HeadersLogo;
       'footers.companies': FootersCompanies;
       'footers.follow-comp': FootersFollowComp;
       'footers.follow-parent': FootersFollowParent;
@@ -511,6 +710,16 @@ declare module '@strapi/types' {
       'footers.tab-primary': FootersTabPrimary;
       'footers.tabs-comp': FootersTabsComp;
       'headers.menu-card': HeadersMenuCard;
+      'headers.menu-item': HeadersMenuItem;
+      'headers.menu-tabs': HeadersMenuTabs;
+      'headers.menu': HeadersMenu;
+      'headers.quick-link': HeadersQuickLink;
+      'headers.quick-service-card': HeadersQuickServiceCard;
+      'headers.quick-services': HeadersQuickServices;
+      'headers.top-nav-item': HeadersTopNavItem;
+      'headers.top-nav-links': HeadersTopNavLinks;
+      'headers.top-nav-tab': HeadersTopNavTab;
+      'headers.top-navigation': HeadersTopNavigation;
       'sections.branch-locators': SectionsBranchLocators;
       'sections.cta-banner': SectionsCtaBanner;
       'sections.cust-satis-carousel': SectionsCustSatisCarousel;

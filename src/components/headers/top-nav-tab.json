@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_headers_top_nav_tabs",
+  "info": {
+    "displayName": "topNavTab"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.label"
+    },
+    "TopNavLinks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "headers.top-nav-links"
+    }
+  }
+}

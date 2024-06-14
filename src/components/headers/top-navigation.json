@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_headers_top_navigations",
+  "info": {
+    "displayName": "TopNavigation"
+  },
+  "options": {},
+  "attributes": {
+    "displayName": {
+      "type": "string"
+    },
+    "TopNavItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "headers.top-nav-item"
+    }
+  }
+}

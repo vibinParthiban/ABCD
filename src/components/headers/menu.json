@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_headers_menus",
+  "info": {
+    "displayName": "MainMenu"
+  },
+  "options": {},
+  "attributes": {
+    "menuItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "headers.menu-item"
+    }
+  }
+}

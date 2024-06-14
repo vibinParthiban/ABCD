@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_headers_clickable_items",
+  "info": {
+    "displayName": "ClickableItem"
+  },
+  "options": {},
+  "attributes": {
+    "Label": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.label"
+    },
+    "Icon": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.icon"
+    },
+    "CTA": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.cta"
+    },
+    "CssClass": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.label"
+    }
+  }
+}

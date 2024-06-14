@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_headers_top_nav_links",
+  "info": {
+    "displayName": "topNavLinks"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.label"
+    },
+    "link": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.link"
+    }
+  }
+}
