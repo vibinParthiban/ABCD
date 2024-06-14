@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_sections_home_banners",
+  "info": {
+    "displayName": "HomeBanner"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "cssclass": {
+      "type": "string"
+    },
+    "infoGraph": {
+      "type": "blocks"
+    },
+    "carouselItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.image-carousel"
+    }
+  }
+}

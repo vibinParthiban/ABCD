@@ -867,7 +867,8 @@ export interface ApiPagePage extends Schema.CollectionType {
         'sections.cta-banner',
         'sections.finance-solution',
         'sections.branch-locators',
-        'sections.sticky-menu'
+        'sections.sticky-menu',
+        'sections.home-banner'
       ]
     >;
     createdAt: Attribute.DateTime;
