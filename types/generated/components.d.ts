@@ -66,6 +66,26 @@ export interface BlocksFieldType extends Schema.Component {
   };
 }
 
+export interface BlocksFieldsImgCarousel extends Schema.Component {
+  collectionName: 'components_blocks_fields_img_carousels';
+  info: {
+    displayName: 'fieldsImgCarousel';
+    description: '';
+  };
+  attributes: {
+    Heading: Attribute.Blocks;
+    Subheading: Attribute.String;
+    BannerImage: Attribute.Component<'blocks.image'>;
+    Infograph: Attribute.String;
+    ButtonCTA: Attribute.Component<'blocks.cta'>;
+    CssClass: Attribute.String;
+    VideoLink: Attribute.String;
+    VideoBGImage: Attribute.String;
+    PlayIcon: Attribute.String;
+    VideoText: Attribute.String;
+  };
+}
+
 export interface BlocksFlyers extends Schema.Component {
   collectionName: 'components_blocks_flyers';
   info: {
@@ -100,6 +120,19 @@ export interface BlocksIcon extends Schema.Component {
   attributes: {
     src: Attribute.Text;
     alt: Attribute.Text;
+  };
+}
+
+export interface BlocksImageCarousel extends Schema.Component {
+  collectionName: 'components_blocks_image_carousels';
+  info: {
+    displayName: 'Image-carousel';
+  };
+  attributes: {
+    url: Attribute.String;
+    name: Attribute.String;
+    displayName: Attribute.String;
+    fields: Attribute.Component<'blocks.fields-img-carousel'>;
   };
 }
 
@@ -424,6 +457,19 @@ export interface SectionsFinanceSolution extends Schema.Component {
   };
 }
 
+export interface SectionsHomeBanner extends Schema.Component {
+  collectionName: 'components_sections_home_banners';
+  info: {
+    displayName: 'HomeBanner';
+  };
+  attributes: {
+    heading: Attribute.String;
+    cssclass: Attribute.String;
+    infoGraph: Attribute.Blocks;
+    carouselItems: Attribute.Component<'blocks.image-carousel', true>;
+  };
+}
+
 export interface SectionsStickyMenu extends Schema.Component {
   collectionName: 'components_sections_sticky_menus';
   info: {
@@ -441,9 +487,11 @@ declare module '@strapi/types' {
       'blocks.card-parent': BlocksCardParent;
       'blocks.cta': BlocksCta;
       'blocks.field-type': BlocksFieldType;
+      'blocks.fields-img-carousel': BlocksFieldsImgCarousel;
       'blocks.flyers': BlocksFlyers;
       'blocks.i-frame': BlocksIFrame;
       'blocks.icon': BlocksIcon;
+      'blocks.image-carousel': BlocksImageCarousel;
       'blocks.image': BlocksImage;
       'blocks.label': BlocksLabel;
       'blocks.prod-recommendation': BlocksProdRecommendation;
@@ -467,6 +515,7 @@ declare module '@strapi/types' {
       'sections.cta-banner': SectionsCtaBanner;
       'sections.cust-satis-carousel': SectionsCustSatisCarousel;
       'sections.finance-solution': SectionsFinanceSolution;
+      'sections.home-banner': SectionsHomeBanner;
       'sections.sticky-menu': SectionsStickyMenu;
     }
   }
