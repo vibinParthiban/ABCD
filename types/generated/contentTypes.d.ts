@@ -788,6 +788,74 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiHeaderHeader extends Schema.CollectionType {
+  collectionName: 'headers';
+  info: {
+    singularName: 'header';
+    pluralName: 'headers';
+    displayName: 'header';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    CompanyLogo: Attribute.Component<'headers.logo'>;
+    MainMenu: Attribute.Component<'headers.menu'>;
+    TopNavigation: Attribute.Component<'headers.top-navigation'>;
+    QuickServices: Attribute.Component<'headers.quick-services'>;
+    HeaderRightside: Attribute.Component<'headers.head-right-side'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::header.header',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::header.header',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiFooterFooter extends Schema.CollectionType {
+  collectionName: 'footers';
+  info: {
+    singularName: 'footer';
+    pluralName: 'footers';
+    displayName: 'Footer';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    our_subsidiaries: Attribute.Component<'footers.companies', true>;
+    footer_info: Attribute.Component<'footers.footer-info'>;
+    footer: Attribute.Component<'footers.tabs-comp'>;
+    follow_us: Attribute.Component<'footers.follow-parent'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::footer.footer',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::footer.footer',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiHomeHome extends Schema.SingleType {
   collectionName: 'homes';
   info: {
@@ -833,7 +901,8 @@ export interface ApiPagePage extends Schema.CollectionType {
         'sections.cta-banner',
         'sections.finance-solution',
         'sections.branch-locators',
-        'sections.sticky-menu'
+        'sections.sticky-menu',
+        'sections.home-banner'
       ]
     >;
     createdAt: Attribute.DateTime;
@@ -864,6 +933,8 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::header.header': ApiHeaderHeader;
+      'api::footer.footer': ApiFooterFooter;
       'api::home.home': ApiHomeHome;
       'api::page.page': ApiPagePage;
     }

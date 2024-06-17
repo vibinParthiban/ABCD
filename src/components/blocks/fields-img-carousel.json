@@ -1,0 +1,44 @@
+{
+  "collectionName": "components_blocks_fields_img_carousels",
+  "info": {
+    "displayName": "fieldsImgCarousel",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Heading": {
+      "type": "blocks"
+    },
+    "Subheading": {
+      "type": "string"
+    },
+    "BannerImage": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.image"
+    },
+    "Infograph": {
+      "type": "string"
+    },
+    "ButtonCTA": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.cta"
+    },
+    "CssClass": {
+      "type": "string"
+    },
+    "VideoLink": {
+      "type": "string"
+    },
+    "VideoBGImage": {
+      "type": "string"
+    },
+    "PlayIcon": {
+      "type": "string"
+    },
+    "VideoText": {
+      "type": "string"
+    }
+  }
+}

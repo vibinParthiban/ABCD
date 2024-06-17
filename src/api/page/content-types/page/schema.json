@@ -26,7 +26,8 @@
         "sections.cta-banner",
         "sections.finance-solution",
         "sections.branch-locators",
-        "sections.sticky-menu"
+        "sections.sticky-menu",
+        "sections.home-banner"
       ]
     }
   }

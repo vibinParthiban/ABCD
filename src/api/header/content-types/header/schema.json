@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "headers",
+  "info": {
+    "singularName": "header",
+    "pluralName": "headers",
+    "displayName": "header"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "CompanyLogo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "headers.logo"
+    },
+    "MainMenu": {
+      "type": "component",
+      "repeatable": false,
+      "component": "headers.menu"
+    },
+    "TopNavigation": {
+      "type": "component",
+      "repeatable": false,
+      "component": "headers.top-navigation"
+    },
+    "QuickServices": {
+      "type": "component",
+      "repeatable": false,
+      "component": "headers.quick-services"
+    }
+    ,
+    "HeaderRightside": {
+      "type": "component",
+      "repeatable": false,
+      "component": "headers.head-right-side"
+    }
+  }
+}

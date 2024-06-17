@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_blocks_image_carousels",
+  "info": {
+    "displayName": "Image-carousel"
+  },
+  "options": {},
+  "attributes": {
+    "url": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "displayName": {
+      "type": "string"
+    },
+    "fields": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.fields-img-carousel"
+    }
+    
+  }
+}

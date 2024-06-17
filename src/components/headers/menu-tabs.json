@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_headers_menu_tabs",
+  "info": {
+    "displayName": "MenuTabs"
+  },
+  "options": {},
+  "attributes": {
+    "menuTitle": {
+      "type": "string"
+    },
+    "menuLink": {
+      "type": "text"
+    },
+    "viewAllLink": {
+      "type": "text"
+    },
+    "CssId": {
+      "type": "string"
+    },
+    "yellowSubTab": {
+      "type": "string"
+    },
+    "menuCards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "headers.menu-card"
+    }
+  }
+}

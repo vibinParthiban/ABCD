@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_blocks_mobile_onlies",
+  "info": {
+    "displayName": "MobileOnly"
+  },
+  "options": {},
+  "attributes": {
+    "value": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

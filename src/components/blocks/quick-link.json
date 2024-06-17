@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_blocks_quick_links",
+  "info": {
+    "displayName": "QuickLink",
+    "icon": "link"
+  },
+  "options": {},
+  "attributes": {
+    "Label": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.label"
+    },
+    "Link": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.link"
+    }
+  }
+}

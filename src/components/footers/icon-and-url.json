@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_footers_icon_and_urls",
+  "info": {
+    "displayName": "IconAndURL",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}

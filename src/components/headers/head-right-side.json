@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_headers_head_right_sides",
+  "info": {
+    "displayName": "headRightSide"
+  },
+  "options": {},
+  "attributes": {
+    "HeadRightItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "headers.clickable-item"
+    }
+  }
+}

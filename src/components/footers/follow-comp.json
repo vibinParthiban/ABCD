@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_footers_follow_comps",
+  "info": {
+    "displayName": "FollowComp"
+  },
+  "options": {},
+  "attributes": {
+    "menuTitle": {
+      "type": "string"
+    },
+    "menuLink": {
+      "type": "string"
+    },
+    "menuIcon": {
+      "type": "string"
+    }
+  }
+}
