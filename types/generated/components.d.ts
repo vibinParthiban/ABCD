@@ -4,9 +4,9 @@ export interface BlocksCardChild extends Schema.Component {
   collectionName: 'components_blocks_card_children';
   info: {
     displayName: 'CardChild';
+    description: '';
   };
   attributes: {
-    typename: Attribute.String;
     productName: Attribute.Component<'blocks.field-type'>;
     productDescription: Attribute.Component<'blocks.field-type'>;
     primaryCTAButton: Attribute.Component<'blocks.cta'>;
@@ -169,6 +169,19 @@ export interface BlocksStickyMenuItem extends Schema.Component {
   };
 }
 
+export interface BlocksTab extends Schema.Component {
+  collectionName: 'components_blocks_tabs';
+  info: {
+    displayName: 'Tab';
+  };
+  attributes: {
+    cardParent: Attribute.Component<'blocks.card-parent', true>;
+    tabName: Attribute.Component<'blocks.field-type', true>;
+    headline: Attribute.Component<'blocks.field-type', true>;
+    cssClass: Attribute.Component<'blocks.field-type', true>;
+  };
+}
+
 export interface BlocksTargetItemsTypeTwo extends Schema.Component {
   collectionName: 'components_blocks_target_items_type_twos';
   info: {
@@ -308,11 +321,8 @@ export interface SectionsFinanceSolution extends Schema.Component {
   };
   attributes: {
     typename: Attribute.String;
-    header: Attribute.Component<'blocks.title', true>;
-    cardParent: Attribute.Component<'blocks.card-parent', true>;
-    tabName: Attribute.Component<'blocks.field-type'>;
-    headline: Attribute.Component<'blocks.field-type'>;
-    cssClass: Attribute.Component<'blocks.field-type'>;
+    header: Attribute.Component<'blocks.title'>;
+    Tab: Attribute.Component<'blocks.tab', true>;
   };
 }
 
@@ -341,6 +351,7 @@ declare module '@strapi/types' {
       'blocks.prod-recommendation': BlocksProdRecommendation;
       'blocks.prod-sub-category': BlocksProdSubCategory;
       'blocks.sticky-menu-item': BlocksStickyMenuItem;
+      'blocks.tab': BlocksTab;
       'blocks.target-items-type-two': BlocksTargetItemsTypeTwo;
       'blocks.target-items': BlocksTargetItems;
       'blocks.target-type-two': BlocksTargetTypeTwo;

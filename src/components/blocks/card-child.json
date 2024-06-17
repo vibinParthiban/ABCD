@@ -1,13 +1,11 @@
 {
   "collectionName": "components_blocks_card_children",
   "info": {
-    "displayName": "CardChild"
+    "displayName": "CardChild",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "typename": {
-      "type": "string"
-    },
     "productName": {
       "type": "component",
       "repeatable": false,

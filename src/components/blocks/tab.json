@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_blocks_tabs",
+  "info": {
+    "displayName": "Tab"
+  },
+  "options": {},
+  "attributes": {
+    "cardParent": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.card-parent"
+    },
+    "tabName": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.field-type"
+    },
+    "headline": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.field-type"
+    },
+    "cssClass": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.field-type"
+    }
+  }
+}

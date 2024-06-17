@@ -10,28 +10,13 @@
     },
     "header":{
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "blocks.title"
     },
-    "cardParent": {
+    "Tab": {
       "type": "component",
       "repeatable": true,
-      "component": "blocks.card-parent"
-    },
-    "tabName": {
-      "type": "component",
-      "repeatable": false,
-      "component": "blocks.field-type"
-    },
-    "headline": {
-      "type": "component",
-      "repeatable": false,
-      "component": "blocks.field-type"
-    },
-    "cssClass": {
-      "type": "component",
-      "repeatable": false,
-      "component": "blocks.field-type"
+      "component": "blocks.tab"
     }
   }
 }
