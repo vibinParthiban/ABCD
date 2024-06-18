@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_blocks_related_reads",
+  "info": {
+    "displayName": "relatedRead",
+    "icon": "book"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.label"
+    },
+    "subHeading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.label"
+    },
+    "bgImage": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.image"
+    },
+    "ctaLink": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.link"
+    }
+  }
+}

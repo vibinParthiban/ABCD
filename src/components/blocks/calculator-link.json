@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_blocks_calculator_links",
+  "info": {
+    "displayName": "calculatorLink",
+    "icon": "link"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.label"
+    },
+    "subheading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.label"
+    },
+    "calculatorIcon": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.icon"
+    },
+    "backgroundImage": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.image"
+    },
+    "link": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.link"
+    },
+    "linkLabel": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.label"
+    }
+  }
+}

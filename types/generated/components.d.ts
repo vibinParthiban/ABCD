@@ -1,5 +1,21 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface BlocksCalculatorLink extends Schema.Component {
+  collectionName: 'components_blocks_calculator_links';
+  info: {
+    displayName: 'calculatorLink';
+    icon: 'link';
+  };
+  attributes: {
+    heading: Attribute.Component<'blocks.label'>;
+    subheading: Attribute.Component<'blocks.label'>;
+    calculatorIcon: Attribute.Component<'blocks.icon'>;
+    backgroundImage: Attribute.Component<'blocks.image'>;
+    link: Attribute.Component<'blocks.link'>;
+    linkLabel: Attribute.Component<'blocks.label'>;
+  };
+}
+
 export interface BlocksCardChild extends Schema.Component {
   collectionName: 'components_blocks_card_children';
   info: {
@@ -223,6 +239,20 @@ export interface BlocksQuickLink extends Schema.Component {
   };
 }
 
+export interface BlocksRelatedRead extends Schema.Component {
+  collectionName: 'components_blocks_related_reads';
+  info: {
+    displayName: 'relatedRead';
+    icon: 'book';
+  };
+  attributes: {
+    heading: Attribute.Component<'blocks.label'>;
+    subHeading: Attribute.Component<'blocks.label'>;
+    bgImage: Attribute.Component<'blocks.image'>;
+    ctaLink: Attribute.Component<'blocks.link'>;
+  };
+}
+
 export interface BlocksStickyMenuItem extends Schema.Component {
   collectionName: 'components_blocks_sticky_menu_items';
   info: {
@@ -310,42 +340,6 @@ export interface BlocksVideoCarousel extends Schema.Component {
     AuthorImage: Attribute.Component<'blocks.image'>;
     EntryDate: Attribute.DateTime;
     ShowInCarousel: Attribute.Boolean & Attribute.DefaultTo<false>;
-  };
-}
-
-export interface HeadersClickableItem extends Schema.Component {
-  collectionName: 'components_headers_clickable_items';
-  info: {
-    displayName: 'ClickableItem';
-  };
-  attributes: {
-    Label: Attribute.Component<'blocks.label'>;
-    Icon: Attribute.Component<'blocks.icon'>;
-    CTA: Attribute.Component<'blocks.cta'>;
-    CssClass: Attribute.Component<'blocks.label'>;
-  };
-}
-
-export interface HeadersHeadRightSide extends Schema.Component {
-  collectionName: 'components_headers_head_right_sides';
-  info: {
-    displayName: 'headRightSide';
-  };
-  attributes: {
-    HeadRightItems: Attribute.Component<'headers.clickable-item', true>;
-  };
-}
-
-export interface HeadersLogo extends Schema.Component {
-  collectionName: 'components_headers_logos';
-  info: {
-    displayName: 'logo';
-    icon: 'picture';
-  };
-  attributes: {
-    CompanyName: Attribute.Component<'blocks.label'>;
-    Icon: Attribute.Component<'blocks.icon'>;
-    Link: Attribute.Component<'blocks.link'>;
   };
 }
 
@@ -457,6 +451,42 @@ export interface FootersTabsComp extends Schema.Component {
   };
 }
 
+export interface HeadersClickableItem extends Schema.Component {
+  collectionName: 'components_headers_clickable_items';
+  info: {
+    displayName: 'ClickableItem';
+  };
+  attributes: {
+    Label: Attribute.Component<'blocks.label'>;
+    Icon: Attribute.Component<'blocks.icon'>;
+    CTA: Attribute.Component<'blocks.cta'>;
+    CssClass: Attribute.Component<'blocks.label'>;
+  };
+}
+
+export interface HeadersHeadRightSide extends Schema.Component {
+  collectionName: 'components_headers_head_right_sides';
+  info: {
+    displayName: 'headRightSide';
+  };
+  attributes: {
+    HeadRightItems: Attribute.Component<'headers.clickable-item', true>;
+  };
+}
+
+export interface HeadersLogo extends Schema.Component {
+  collectionName: 'components_headers_logos';
+  info: {
+    displayName: 'logo';
+    icon: 'picture';
+  };
+  attributes: {
+    CompanyName: Attribute.Component<'blocks.label'>;
+    Icon: Attribute.Component<'blocks.icon'>;
+    Link: Attribute.Component<'blocks.link'>;
+  };
+}
+
 export interface HeadersMenuCard extends Schema.Component {
   collectionName: 'components_headers_menu_cards';
   info: {
@@ -497,6 +527,8 @@ export interface HeadersMenuTabs extends Schema.Component {
     CssId: Attribute.String;
     yellowSubTab: Attribute.String;
     menuCards: Attribute.Component<'headers.menu-card', true>;
+    calculatorLinks: Attribute.Component<'blocks.calculator-link', true>;
+    relatedReads: Attribute.Component<'blocks.related-read', true>;
   };
 }
 
@@ -676,6 +708,7 @@ export interface SectionsStickyMenu extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'blocks.calculator-link': BlocksCalculatorLink;
       'blocks.card-child': BlocksCardChild;
       'blocks.card-parent': BlocksCardParent;
       'blocks.cta': BlocksCta;
@@ -692,15 +725,13 @@ declare module '@strapi/types' {
       'blocks.prod-recommendation': BlocksProdRecommendation;
       'blocks.prod-sub-category': BlocksProdSubCategory;
       'blocks.quick-link': BlocksQuickLink;
+      'blocks.related-read': BlocksRelatedRead;
       'blocks.sticky-menu-item': BlocksStickyMenuItem;
       'blocks.target-items-type-two': BlocksTargetItemsTypeTwo;
       'blocks.target-items': BlocksTargetItems;
       'blocks.target-type-two': BlocksTargetTypeTwo;
       'blocks.title': BlocksTitle;
       'blocks.video-carousel': BlocksVideoCarousel;
-      'headers.clickable-item': HeadersClickableItem;
-      'headers.head-right-side': HeadersHeadRightSide;
-      'headers.logo': HeadersLogo;
       'footers.companies': FootersCompanies;
       'footers.follow-comp': FootersFollowComp;
       'footers.follow-parent': FootersFollowParent;
@@ -709,6 +740,9 @@ declare module '@strapi/types' {
       'footers.icon-and-url': FootersIconAndUrl;
       'footers.tab-primary': FootersTabPrimary;
       'footers.tabs-comp': FootersTabsComp;
+      'headers.clickable-item': HeadersClickableItem;
+      'headers.head-right-side': HeadersHeadRightSide;
+      'headers.logo': HeadersLogo;
       'headers.menu-card': HeadersMenuCard;
       'headers.menu-item': HeadersMenuItem;
       'headers.menu-tabs': HeadersMenuTabs;

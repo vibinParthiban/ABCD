@@ -788,40 +788,6 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
-export interface ApiHeaderHeader extends Schema.CollectionType {
-  collectionName: 'headers';
-  info: {
-    singularName: 'header';
-    pluralName: 'headers';
-    displayName: 'header';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    CompanyLogo: Attribute.Component<'headers.logo'>;
-    MainMenu: Attribute.Component<'headers.menu'>;
-    TopNavigation: Attribute.Component<'headers.top-navigation'>;
-    QuickServices: Attribute.Component<'headers.quick-services'>;
-    HeaderRightside: Attribute.Component<'headers.head-right-side'>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::header.header',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::header.header',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface ApiFooterFooter extends Schema.CollectionType {
   collectionName: 'footers';
   info: {
@@ -849,6 +815,40 @@ export interface ApiFooterFooter extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::footer.footer',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiHeaderHeader extends Schema.CollectionType {
+  collectionName: 'headers';
+  info: {
+    singularName: 'header';
+    pluralName: 'headers';
+    displayName: 'header';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    CompanyLogo: Attribute.Component<'headers.logo'>;
+    MainMenu: Attribute.Component<'headers.menu'>;
+    TopNavigation: Attribute.Component<'headers.top-navigation'>;
+    QuickServices: Attribute.Component<'headers.quick-services'>;
+    HeaderRightside: Attribute.Component<'headers.head-right-side'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::header.header',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::header.header',
       'oneToOne',
       'admin::user'
     > &
@@ -933,8 +933,8 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
-      'api::header.header': ApiHeaderHeader;
       'api::footer.footer': ApiFooterFooter;
+      'api::header.header': ApiHeaderHeader;
       'api::home.home': ApiHomeHome;
       'api::page.page': ApiPagePage;
     }
