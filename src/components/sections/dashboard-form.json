@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_sections_dashboard_forms",
+  "info": {
+    "displayName": "DashboardForm"
+  },
+  "options": {},
+  "attributes": {
+    "Heading": {
+      "type": "string"
+    },
+    "SubHeading": {
+      "type": "string"
+    },
+    "ProductDropdown": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.product-dropdown"
+    },
+    "TermsnCondition":{
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.text-link"
+    }
+  }
+}

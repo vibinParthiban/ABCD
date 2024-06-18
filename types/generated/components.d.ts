@@ -186,6 +186,23 @@ export interface BlocksMobileOnly extends Schema.Component {
   };
 }
 
+export interface BlocksProdDropFields extends Schema.Component {
+  collectionName: 'components_blocks_prod_drop_fields';
+  info: {
+    displayName: 'prodDropFields';
+  };
+  attributes: {
+    Label: Attribute.String;
+    GroupNumber: Attribute.Integer;
+    KeyValue: Attribute.String;
+    Icon: Attribute.Component<'blocks.icon'>;
+    key: Attribute.String;
+    ProductCategory: Attribute.String;
+    ProductName: Attribute.String;
+    LOB: Attribute.String;
+  };
+}
+
 export interface BlocksProdRecommendation extends Schema.Component {
   collectionName: 'components_blocks_prod_recommendations';
   info: {
@@ -208,6 +225,19 @@ export interface BlocksProdSubCategory extends Schema.Component {
     primaryCTAButton: Attribute.Component<'blocks.cta'>;
     secondaryCTAButton: Attribute.Component<'blocks.cta'>;
     accordionClass: Attribute.Component<'blocks.field-type'>;
+  };
+}
+
+export interface BlocksProductDropdown extends Schema.Component {
+  collectionName: 'components_blocks_product_dropdowns';
+  info: {
+    displayName: 'ProductDropdown';
+  };
+  attributes: {
+    url: Attribute.String;
+    name: Attribute.String;
+    displayName: Attribute.String;
+    fields: Attribute.Component<'blocks.prod-drop-fields'>;
   };
 }
 
@@ -274,6 +304,21 @@ export interface BlocksTargetTypeTwo extends Schema.Component {
   };
 }
 
+export interface BlocksTextLink extends Schema.Component {
+  collectionName: 'components_blocks_text_links';
+  info: {
+    displayName: 'TextLink';
+  };
+  attributes: {
+    href: Attribute.String;
+    text: Attribute.String;
+    linktype: Attribute.String;
+    url: Attribute.String;
+    anchor: Attribute.String;
+    target: Attribute.String;
+  };
+}
+
 export interface BlocksTitle extends Schema.Component {
   collectionName: 'components_blocks_titles';
   info: {
@@ -310,42 +355,6 @@ export interface BlocksVideoCarousel extends Schema.Component {
     AuthorImage: Attribute.Component<'blocks.image'>;
     EntryDate: Attribute.DateTime;
     ShowInCarousel: Attribute.Boolean & Attribute.DefaultTo<false>;
-  };
-}
-
-export interface HeadersClickableItem extends Schema.Component {
-  collectionName: 'components_headers_clickable_items';
-  info: {
-    displayName: 'ClickableItem';
-  };
-  attributes: {
-    Label: Attribute.Component<'blocks.label'>;
-    Icon: Attribute.Component<'blocks.icon'>;
-    CTA: Attribute.Component<'blocks.cta'>;
-    CssClass: Attribute.Component<'blocks.label'>;
-  };
-}
-
-export interface HeadersHeadRightSide extends Schema.Component {
-  collectionName: 'components_headers_head_right_sides';
-  info: {
-    displayName: 'headRightSide';
-  };
-  attributes: {
-    HeadRightItems: Attribute.Component<'headers.clickable-item', true>;
-  };
-}
-
-export interface HeadersLogo extends Schema.Component {
-  collectionName: 'components_headers_logos';
-  info: {
-    displayName: 'logo';
-    icon: 'picture';
-  };
-  attributes: {
-    CompanyName: Attribute.Component<'blocks.label'>;
-    Icon: Attribute.Component<'blocks.icon'>;
-    Link: Attribute.Component<'blocks.link'>;
   };
 }
 
@@ -432,6 +441,23 @@ export interface FootersIconAndUrl extends Schema.Component {
   };
 }
 
+export interface FootersProdDropFields extends Schema.Component {
+  collectionName: 'components_footers_prod_drop_fields';
+  info: {
+    displayName: 'prodDropFields';
+  };
+  attributes: {
+    Label: Attribute.String;
+    GroupNumber: Attribute.Integer;
+    KeyValue: Attribute.String;
+    Icon: Attribute.Component<'blocks.icon'>;
+    key: Attribute.String;
+    ProductCategory: Attribute.String;
+    ProductName: Attribute.String;
+    LOB: Attribute.String;
+  };
+}
+
 export interface FootersTabPrimary extends Schema.Component {
   collectionName: 'components_footers_tab_primaries';
   info: {
@@ -454,6 +480,42 @@ export interface FootersTabsComp extends Schema.Component {
   attributes: {
     name: Attribute.String;
     primary: Attribute.Component<'footers.tab-primary', true>;
+  };
+}
+
+export interface HeadersClickableItem extends Schema.Component {
+  collectionName: 'components_headers_clickable_items';
+  info: {
+    displayName: 'ClickableItem';
+  };
+  attributes: {
+    Label: Attribute.Component<'blocks.label'>;
+    Icon: Attribute.Component<'blocks.icon'>;
+    CTA: Attribute.Component<'blocks.cta'>;
+    CssClass: Attribute.Component<'blocks.label'>;
+  };
+}
+
+export interface HeadersHeadRightSide extends Schema.Component {
+  collectionName: 'components_headers_head_right_sides';
+  info: {
+    displayName: 'headRightSide';
+  };
+  attributes: {
+    HeadRightItems: Attribute.Component<'headers.clickable-item', true>;
+  };
+}
+
+export interface HeadersLogo extends Schema.Component {
+  collectionName: 'components_headers_logos';
+  info: {
+    displayName: 'logo';
+    icon: 'picture';
+  };
+  attributes: {
+    CompanyName: Attribute.Component<'blocks.label'>;
+    Icon: Attribute.Component<'blocks.icon'>;
+    Link: Attribute.Component<'blocks.link'>;
   };
 }
 
@@ -635,6 +697,41 @@ export interface SectionsCustSatisCarousel extends Schema.Component {
   };
 }
 
+export interface SectionsDashboardForm extends Schema.Component {
+  collectionName: 'components_sections_dashboard_forms';
+  info: {
+    displayName: 'DashboardForm';
+  };
+  attributes: {
+    Heading: Attribute.String;
+    SubHeading: Attribute.String;
+    ProductDropdown: Attribute.Component<'blocks.product-dropdown', true>;
+    TermsnCondition: Attribute.Component<'blocks.text-link'>;
+  };
+}
+
+export interface SectionsDiscoverSection extends Schema.Component {
+  collectionName: 'components_sections_discover_sections';
+  info: {
+    displayName: 'DiscoverSection';
+  };
+  attributes: {
+    dcAppBarImg: Attribute.Component<'blocks.image'>;
+    backgroundImage: Attribute.Component<'blocks.image'>;
+    heading1: Attribute.String;
+    heading2: Attribute.String;
+    cssclass: Attribute.String;
+    subheading1: Attribute.String;
+    qrcodeText: Attribute.String;
+    appDownloadHeading: Attribute.String;
+    mobileAppImg: Attribute.Component<'blocks.image'>;
+    appleStoreImg: Attribute.Component<'blocks.image'>;
+    appleStoreCTAButton: Attribute.Component<'blocks.cta'>;
+    playStoreCTAButton: Attribute.Component<'blocks.cta'>;
+    playStoreImg: Attribute.Component<'blocks.image'>;
+  };
+}
+
 export interface SectionsFinanceSolution extends Schema.Component {
   collectionName: 'components_sections_finance_solutions';
   info: {
@@ -689,26 +786,30 @@ declare module '@strapi/types' {
       'blocks.label': BlocksLabel;
       'blocks.link': BlocksLink;
       'blocks.mobile-only': BlocksMobileOnly;
+      'blocks.prod-drop-fields': BlocksProdDropFields;
       'blocks.prod-recommendation': BlocksProdRecommendation;
       'blocks.prod-sub-category': BlocksProdSubCategory;
+      'blocks.product-dropdown': BlocksProductDropdown;
       'blocks.quick-link': BlocksQuickLink;
       'blocks.sticky-menu-item': BlocksStickyMenuItem;
       'blocks.target-items-type-two': BlocksTargetItemsTypeTwo;
       'blocks.target-items': BlocksTargetItems;
       'blocks.target-type-two': BlocksTargetTypeTwo;
+      'blocks.text-link': BlocksTextLink;
       'blocks.title': BlocksTitle;
       'blocks.video-carousel': BlocksVideoCarousel;
-      'headers.clickable-item': HeadersClickableItem;
-      'headers.head-right-side': HeadersHeadRightSide;
-      'headers.logo': HeadersLogo;
       'footers.companies': FootersCompanies;
       'footers.follow-comp': FootersFollowComp;
       'footers.follow-parent': FootersFollowParent;
       'footers.footer-info': FootersFooterInfo;
       'footers.footer-tabs': FootersFooterTabs;
       'footers.icon-and-url': FootersIconAndUrl;
+      'footers.prod-drop-fields': FootersProdDropFields;
       'footers.tab-primary': FootersTabPrimary;
       'footers.tabs-comp': FootersTabsComp;
+      'headers.clickable-item': HeadersClickableItem;
+      'headers.head-right-side': HeadersHeadRightSide;
+      'headers.logo': HeadersLogo;
       'headers.menu-card': HeadersMenuCard;
       'headers.menu-item': HeadersMenuItem;
       'headers.menu-tabs': HeadersMenuTabs;
@@ -723,6 +824,8 @@ declare module '@strapi/types' {
       'sections.branch-locators': SectionsBranchLocators;
       'sections.cta-banner': SectionsCtaBanner;
       'sections.cust-satis-carousel': SectionsCustSatisCarousel;
+      'sections.dashboard-form': SectionsDashboardForm;
+      'sections.discover-section': SectionsDiscoverSection;
       'sections.finance-solution': SectionsFinanceSolution;
       'sections.home-banner': SectionsHomeBanner;
       'sections.sticky-menu': SectionsStickyMenu;

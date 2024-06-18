@@ -27,7 +27,9 @@
         "sections.finance-solution",
         "sections.branch-locators",
         "sections.sticky-menu",
-        "sections.home-banner"
+        "sections.home-banner",
+        "sections.dashboard-form",
+        "sections.discover-section"
       ]
     }
   }

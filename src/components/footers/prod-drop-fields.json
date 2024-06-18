@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_footers_prod_drop_fields",
+  "info": {
+    "displayName": "prodDropFields"
+  },
+  "options": {},
+  "attributes": {
+    "Label": {
+      "type": "string"
+    },
+    "GroupNumber": {
+      "type": "integer"
+    },
+    "KeyValue": {
+      "type": "string"
+    },
+    "Icon": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.icon"
+    },
+    "key": {
+      "type": "string"
+    },
+    "ProductCategory": {
+      "type": "string"
+    },
+    "ProductName": {
+      "type": "string"
+    },
+    "LOB": {
+      "type": "string"
+    }
+  }
+}

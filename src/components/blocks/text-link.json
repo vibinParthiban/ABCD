@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_blocks_text_links",
+  "info": {
+    "displayName": "TextLink"
+  },
+  "options": {},
+  "attributes": {
+    "href": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    },
+    "linktype": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "anchor": {
+      "type": "string"
+    },
+    "target": {
+      "type": "string"
+    }
+  }
+}
