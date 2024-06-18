@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_blocks_links",
+  "info": {
+    "displayName": "Link",
+    "icon": "link"
+  },
+  "options": {},
+  "attributes": {
+    "url": {
+      "type": "text"
+    },
+    "text": {
+      "type": "string"
+    },
+    "linkType": {
+      "type": "enumeration",
+      "enum": [
+        "internal",
+        "external"
+      ]
+    }
+  }
+}

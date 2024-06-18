@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_footers_tabs_comps",
+  "info": {
+    "displayName": "TabsComp"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "primary":{
+      "type":"component",
+      "repeatable":true,
+      "component":"footers.tab-primary"
+    }
+  }
+}

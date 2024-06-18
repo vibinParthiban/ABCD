@@ -66,6 +66,26 @@ export interface BlocksFieldType extends Schema.Component {
   };
 }
 
+export interface BlocksFieldsImgCarousel extends Schema.Component {
+  collectionName: 'components_blocks_fields_img_carousels';
+  info: {
+    displayName: 'fieldsImgCarousel';
+    description: '';
+  };
+  attributes: {
+    Heading: Attribute.Blocks;
+    Subheading: Attribute.String;
+    BannerImage: Attribute.Component<'blocks.image'>;
+    Infograph: Attribute.String;
+    ButtonCTA: Attribute.Component<'blocks.cta'>;
+    CssClass: Attribute.String;
+    VideoLink: Attribute.String;
+    VideoBGImage: Attribute.String;
+    PlayIcon: Attribute.String;
+    VideoText: Attribute.String;
+  };
+}
+
 export interface BlocksFlyers extends Schema.Component {
   collectionName: 'components_blocks_flyers';
   info: {
@@ -103,6 +123,19 @@ export interface BlocksIcon extends Schema.Component {
   };
 }
 
+export interface BlocksImageCarousel extends Schema.Component {
+  collectionName: 'components_blocks_image_carousels';
+  info: {
+    displayName: 'Image-carousel';
+  };
+  attributes: {
+    url: Attribute.String;
+    name: Attribute.String;
+    displayName: Attribute.String;
+    fields: Attribute.Component<'blocks.fields-img-carousel'>;
+  };
+}
+
 export interface BlocksImage extends Schema.Component {
   collectionName: 'components_blocks_images';
   info: {
@@ -130,6 +163,29 @@ export interface BlocksLabel extends Schema.Component {
   };
 }
 
+export interface BlocksLink extends Schema.Component {
+  collectionName: 'components_blocks_links';
+  info: {
+    displayName: 'Link';
+    icon: 'link';
+  };
+  attributes: {
+    url: Attribute.Text;
+    text: Attribute.String;
+    linkType: Attribute.Enumeration<['internal', 'external']>;
+  };
+}
+
+export interface BlocksMobileOnly extends Schema.Component {
+  collectionName: 'components_blocks_mobile_onlies';
+  info: {
+    displayName: 'MobileOnly';
+  };
+  attributes: {
+    value: Attribute.Boolean & Attribute.DefaultTo<false>;
+  };
+}
+
 export interface BlocksProdRecommendation extends Schema.Component {
   collectionName: 'components_blocks_prod_recommendations';
   info: {
@@ -152,6 +208,18 @@ export interface BlocksProdSubCategory extends Schema.Component {
     primaryCTAButton: Attribute.Component<'blocks.cta'>;
     secondaryCTAButton: Attribute.Component<'blocks.cta'>;
     accordionClass: Attribute.Component<'blocks.field-type'>;
+  };
+}
+
+export interface BlocksQuickLink extends Schema.Component {
+  collectionName: 'components_blocks_quick_links';
+  info: {
+    displayName: 'QuickLink';
+    icon: 'link';
+  };
+  attributes: {
+    Label: Attribute.Component<'blocks.label'>;
+    Link: Attribute.Component<'blocks.link'>;
   };
 }
 
@@ -245,6 +313,150 @@ export interface BlocksVideoCarousel extends Schema.Component {
   };
 }
 
+export interface HeadersClickableItem extends Schema.Component {
+  collectionName: 'components_headers_clickable_items';
+  info: {
+    displayName: 'ClickableItem';
+  };
+  attributes: {
+    Label: Attribute.Component<'blocks.label'>;
+    Icon: Attribute.Component<'blocks.icon'>;
+    CTA: Attribute.Component<'blocks.cta'>;
+    CssClass: Attribute.Component<'blocks.label'>;
+  };
+}
+
+export interface HeadersHeadRightSide extends Schema.Component {
+  collectionName: 'components_headers_head_right_sides';
+  info: {
+    displayName: 'headRightSide';
+  };
+  attributes: {
+    HeadRightItems: Attribute.Component<'headers.clickable-item', true>;
+  };
+}
+
+export interface HeadersLogo extends Schema.Component {
+  collectionName: 'components_headers_logos';
+  info: {
+    displayName: 'logo';
+    icon: 'picture';
+  };
+  attributes: {
+    CompanyName: Attribute.Component<'blocks.label'>;
+    Icon: Attribute.Component<'blocks.icon'>;
+    Link: Attribute.Component<'blocks.link'>;
+  };
+}
+
+export interface FootersCompanies extends Schema.Component {
+  collectionName: 'components_footers_companies';
+  info: {
+    displayName: 'companies';
+    description: '';
+  };
+  attributes: {
+    companyName: Attribute.String;
+    icon: Attribute.String;
+    link: Attribute.String;
+  };
+}
+
+export interface FootersFollowComp extends Schema.Component {
+  collectionName: 'components_footers_follow_comps';
+  info: {
+    displayName: 'FollowComp';
+  };
+  attributes: {
+    menuTitle: Attribute.String;
+    menuLink: Attribute.String;
+    menuIcon: Attribute.String;
+  };
+}
+
+export interface FootersFollowParent extends Schema.Component {
+  collectionName: 'components_footers_follow_parents';
+  info: {
+    displayName: 'FollowParent';
+  };
+  attributes: {
+    displayName: Attribute.String;
+    children: Attribute.Component<'footers.follow-comp', true>;
+  };
+}
+
+export interface FootersFooterInfo extends Schema.Component {
+  collectionName: 'components_footers_footer_infos';
+  info: {
+    displayName: 'FooterInfo';
+  };
+  attributes: {
+    Logo: Attribute.String;
+    LogoCTA: Attribute.String;
+    Icon: Attribute.String;
+    TollText: Attribute.String;
+    IconCTA: Attribute.Component<'footers.icon-and-url'>;
+    Address: Attribute.Blocks;
+    WarningText: Attribute.Blocks;
+    RedRibonText: Attribute.Blocks;
+    SubsidiariesTitle: Attribute.String;
+    DownloadText: Attribute.String;
+    DownloadIcon: Attribute.String;
+    AppStore: Attribute.Component<'footers.icon-and-url'>;
+    AppStoreIcon: Attribute.String;
+    PlayStore: Attribute.Component<'footers.icon-and-url'>;
+    PlayStoreIcon: Attribute.String;
+  };
+}
+
+export interface FootersFooterTabs extends Schema.Component {
+  collectionName: 'components_footers_footer_tabs';
+  info: {
+    displayName: 'FooterTabs';
+  };
+  attributes: {
+    menuTitle: Attribute.String;
+    menuLink: Attribute.String;
+  };
+}
+
+export interface FootersIconAndUrl extends Schema.Component {
+  collectionName: 'components_footers_icon_and_urls';
+  info: {
+    displayName: 'IconAndURL';
+    description: '';
+  };
+  attributes: {
+    text: Attribute.String;
+    url: Attribute.String;
+  };
+}
+
+export interface FootersTabPrimary extends Schema.Component {
+  collectionName: 'components_footers_tab_primaries';
+  info: {
+    displayName: 'TabPrimary';
+  };
+  attributes: {
+    menuTitle: Attribute.String;
+    menuLink: Attribute.String;
+    menuIcon: Attribute.String;
+    mobileOnly: Attribute.String;
+    tabs: Attribute.Component<'footers.footer-tabs', true>;
+  };
+}
+
+export interface FootersTabsComp extends Schema.Component {
+  collectionName: 'components_footers_tabs_comps';
+  info: {
+    displayName: 'TabsComp';
+  };
+  attributes: {
+    name: Attribute.String;
+    primary: Attribute.Component<'footers.tab-primary', true>;
+  };
+}
+
 export interface HeadersMenuCard extends Schema.Component {
   collectionName: 'components_headers_menu_cards';
   info: {
@@ -255,6 +467,128 @@ export interface HeadersMenuCard extends Schema.Component {
     menuSubTitle: Attribute.Text;
     url: Attribute.Text;
     icon: Attribute.Component<'blocks.icon'>;
+  };
+}
+
+export interface HeadersMenuItem extends Schema.Component {
+  collectionName: 'components_headers_menu_items';
+  info: {
+    displayName: 'MenuItem';
+  };
+  attributes: {
+    menuTitle: Attribute.String;
+    menuLink: Attribute.Text;
+    menuIcon: Attribute.Text;
+    mobileOnly: Attribute.Boolean & Attribute.DefaultTo<false>;
+    CssClassName: Attribute.String;
+    menuTabs: Attribute.Component<'headers.menu-tabs', true>;
+  };
+}
+
+export interface HeadersMenuTabs extends Schema.Component {
+  collectionName: 'components_headers_menu_tabs';
+  info: {
+    displayName: 'MenuTabs';
+  };
+  attributes: {
+    menuTitle: Attribute.String;
+    menuLink: Attribute.Text;
+    viewAllLink: Attribute.Text;
+    CssId: Attribute.String;
+    yellowSubTab: Attribute.String;
+    menuCards: Attribute.Component<'headers.menu-card', true>;
+  };
+}
+
+export interface HeadersMenu extends Schema.Component {
+  collectionName: 'components_headers_menus';
+  info: {
+    displayName: 'MainMenu';
+  };
+  attributes: {
+    menuItems: Attribute.Component<'headers.menu-item', true>;
+  };
+}
+
+export interface HeadersQuickLink extends Schema.Component {
+  collectionName: 'components_headers_quick_link';
+  info: {
+    displayName: 'QuickLink';
+  };
+  attributes: {
+    QuickLink: Attribute.Component<'blocks.quick-link', true>;
+  };
+}
+
+export interface HeadersQuickServiceCard extends Schema.Component {
+  collectionName: 'components_headers_quick_service_cards';
+  info: {
+    displayName: 'QuickServiceCard';
+  };
+  attributes: {
+    menuTitle: Attribute.Component<'blocks.label'>;
+    menuLink: Attribute.Component<'blocks.label'>;
+    menuIcon: Attribute.Component<'blocks.icon'>;
+    mobileOnly: Attribute.Component<'blocks.mobile-only'>;
+    QuickLinks: Attribute.Component<'headers.quick-link', true>;
+  };
+}
+
+export interface HeadersQuickServices extends Schema.Component {
+  collectionName: 'components_headers_quick_services';
+  info: {
+    displayName: 'QuickServices';
+  };
+  attributes: {
+    QuickServiceCards: Attribute.Component<'headers.quick-service-card', true>;
+  };
+}
+
+export interface HeadersTopNavItem extends Schema.Component {
+  collectionName: 'components_headers_top_nav_items';
+  info: {
+    displayName: 'topNavItem';
+  };
+  attributes: {
+    displayName: Attribute.String;
+    menuTitle: Attribute.Component<'blocks.label'>;
+    menuIcon: Attribute.Component<'blocks.icon'>;
+    menuLink: Attribute.Component<'blocks.link'>;
+    mobileOnly: Attribute.Component<'blocks.mobile-only'>;
+    TopNavTabs: Attribute.Component<'headers.top-nav-tab', true>;
+  };
+}
+
+export interface HeadersTopNavLinks extends Schema.Component {
+  collectionName: 'components_headers_top_nav_links';
+  info: {
+    displayName: 'topNavLinks';
+  };
+  attributes: {
+    label: Attribute.Component<'blocks.label'>;
+    link: Attribute.Component<'blocks.link'>;
+  };
+}
+
+export interface HeadersTopNavTab extends Schema.Component {
+  collectionName: 'components_headers_top_nav_tabs';
+  info: {
+    displayName: 'topNavTab';
+  };
+  attributes: {
+    heading: Attribute.Component<'blocks.label'>;
+    TopNavLinks: Attribute.Component<'headers.top-nav-links', true>;
+  };
+}
+
+export interface HeadersTopNavigation extends Schema.Component {
+  collectionName: 'components_headers_top_navigations';
+  info: {
+    displayName: 'TopNavigation';
+  };
+  attributes: {
+    displayName: Attribute.String;
+    TopNavItems: Attribute.Component<'headers.top-nav-item', true>;
   };
 }
 
@@ -316,6 +650,19 @@ export interface SectionsFinanceSolution extends Schema.Component {
   };
 }
 
+export interface SectionsHomeBanner extends Schema.Component {
+  collectionName: 'components_sections_home_banners';
+  info: {
+    displayName: 'HomeBanner';
+  };
+  attributes: {
+    heading: Attribute.String;
+    cssclass: Attribute.String;
+    infoGraph: Attribute.Blocks;
+    carouselItems: Attribute.Component<'blocks.image-carousel', true>;
+  };
+}
+
 export interface SectionsStickyMenu extends Schema.Component {
   collectionName: 'components_sections_sticky_menus';
   info: {
@@ -333,24 +680,51 @@ declare module '@strapi/types' {
       'blocks.card-parent': BlocksCardParent;
       'blocks.cta': BlocksCta;
       'blocks.field-type': BlocksFieldType;
+      'blocks.fields-img-carousel': BlocksFieldsImgCarousel;
       'blocks.flyers': BlocksFlyers;
       'blocks.i-frame': BlocksIFrame;
       'blocks.icon': BlocksIcon;
+      'blocks.image-carousel': BlocksImageCarousel;
       'blocks.image': BlocksImage;
       'blocks.label': BlocksLabel;
+      'blocks.link': BlocksLink;
+      'blocks.mobile-only': BlocksMobileOnly;
       'blocks.prod-recommendation': BlocksProdRecommendation;
       'blocks.prod-sub-category': BlocksProdSubCategory;
+      'blocks.quick-link': BlocksQuickLink;
       'blocks.sticky-menu-item': BlocksStickyMenuItem;
       'blocks.target-items-type-two': BlocksTargetItemsTypeTwo;
       'blocks.target-items': BlocksTargetItems;
       'blocks.target-type-two': BlocksTargetTypeTwo;
       'blocks.title': BlocksTitle;
       'blocks.video-carousel': BlocksVideoCarousel;
+      'headers.clickable-item': HeadersClickableItem;
+      'headers.head-right-side': HeadersHeadRightSide;
+      'headers.logo': HeadersLogo;
+      'footers.companies': FootersCompanies;
+      'footers.follow-comp': FootersFollowComp;
+      'footers.follow-parent': FootersFollowParent;
+      'footers.footer-info': FootersFooterInfo;
+      'footers.footer-tabs': FootersFooterTabs;
+      'footers.icon-and-url': FootersIconAndUrl;
+      'footers.tab-primary': FootersTabPrimary;
+      'footers.tabs-comp': FootersTabsComp;
       'headers.menu-card': HeadersMenuCard;
+      'headers.menu-item': HeadersMenuItem;
+      'headers.menu-tabs': HeadersMenuTabs;
+      'headers.menu': HeadersMenu;
+      'headers.quick-link': HeadersQuickLink;
+      'headers.quick-service-card': HeadersQuickServiceCard;
+      'headers.quick-services': HeadersQuickServices;
+      'headers.top-nav-item': HeadersTopNavItem;
+      'headers.top-nav-links': HeadersTopNavLinks;
+      'headers.top-nav-tab': HeadersTopNavTab;
+      'headers.top-navigation': HeadersTopNavigation;
       'sections.branch-locators': SectionsBranchLocators;
       'sections.cta-banner': SectionsCtaBanner;
       'sections.cust-satis-carousel': SectionsCustSatisCarousel;
       'sections.finance-solution': SectionsFinanceSolution;
+      'sections.home-banner': SectionsHomeBanner;
       'sections.sticky-menu': SectionsStickyMenu;
     }
   }

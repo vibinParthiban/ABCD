@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_headers_quick_link",
+  "info": {
+    "displayName": "QuickLink"
+  },
+  "options": {},
+  "attributes": {
+    "QuickLink": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.quick-link"
+    }
+  }
+}

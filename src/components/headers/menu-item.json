@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_headers_menu_items",
+  "info": {
+    "displayName": "MenuItem"
+  },
+  "options": {},
+  "attributes": {
+    "menuTitle": {
+      "type": "string"
+    },
+    "menuLink": {
+      "type": "text"
+    },
+    "menuIcon": {
+      "type": "text"
+    },
+    "mobileOnly": {
+      "type": "boolean",
+      "default": false
+    },
+    "CssClassName": {
+      "type": "string"
+    },
+    "menuTabs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "headers.menu-tabs"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_headers_logos",
+  "info": {
+    "displayName": "logo",
+    "icon": "picture"
+  },
+  "options": {},
+  "attributes": {
+    "CompanyName": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.label"
+    },
+    "Icon": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.icon"
+    },
+    "Link": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.link"
+    }
+  }
+}

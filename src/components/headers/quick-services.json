@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_headers_quick_services",
+  "info": {
+    "displayName": "QuickServices"
+  },
+  "options": {},
+  "attributes": {
+    "QuickServiceCards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "headers.quick-service-card"
+    }
+  }
+}

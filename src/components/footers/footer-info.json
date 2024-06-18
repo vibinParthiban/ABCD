@@ -1,0 +1,61 @@
+{
+  "collectionName": "components_footers_footer_infos",
+  "info": {
+    "displayName": "FooterInfo"
+  },
+  "options": {},
+  "attributes": {
+    "Logo": {
+      "type": "string"
+    },
+    "LogoCTA": {
+      "type": "string"
+    },
+    "Icon": {
+      "type": "string"
+    },
+    "TollText": {
+      "type": "string"
+    },
+    "IconCTA": {
+      "displayName": "IconAndURL",
+      "type": "component",
+      "repeatable": false,
+      "component": "footers.icon-and-url"
+    },
+    "Address": {
+      "type": "blocks"
+    },
+    "WarningText": {
+      "type": "blocks"
+    },
+    "RedRibonText": {
+      "type": "blocks"
+    },
+    "SubsidiariesTitle": {
+      "type": "string"
+    },
+    "DownloadText": {
+      "type": "string"
+    },
+    "DownloadIcon": {
+      "type": "string"
+    },
+    "AppStore": {
+      "type": "component",
+      "repeatable": false,
+      "component": "footers.icon-and-url"
+    },
+    "AppStoreIcon": {
+      "type": "string"
+    },
+    "PlayStore": {
+      "type": "component",
+      "repeatable": false,
+      "component": "footers.icon-and-url"
+    },
+    "PlayStoreIcon": {
+      "type": "string"
+    }
+  }
+}

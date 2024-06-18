@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_footers_tab_primaries",
+  "info": {
+    "displayName": "TabPrimary"
+  },
+  "options": {},
+  "attributes": {
+    "menuTitle": {
+      "type": "string"
+    },
+    "menuLink": {
+      "type": "string"
+    },
+    "menuIcon": {
+      "type": "string"
+    },
+    "mobileOnly": {
+      "type": "string"
+    },
+    "tabs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "footers.footer-tabs"
+    }
+  }
+}
