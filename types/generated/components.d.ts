@@ -1,5 +1,19 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface BlocksBlogListComp extends Schema.Component {
+  collectionName: 'components_blocks_blog_list_comps';
+  info: {
+    displayName: 'blogListComp';
+  };
+  attributes: {
+    link: Attribute.String;
+    category: Attribute.String;
+    title: Attribute.String;
+    date: Attribute.String;
+    time_to_read: Attribute.String;
+  };
+}
+
 export interface BlocksCalculatorLink extends Schema.Component {
   collectionName: 'components_blocks_calculator_links';
   info: {
@@ -624,6 +638,20 @@ export interface HeadersTopNavigation extends Schema.Component {
   };
 }
 
+export interface SectionsBlogs extends Schema.Component {
+  collectionName: 'components_sections_blogs';
+  info: {
+    displayName: 'Blogs';
+  };
+  attributes: {
+    viewAllBlogsText: Attribute.String;
+    viewAllBlogsLink: Attribute.String;
+    minReadText: Attribute.String;
+    sectionTitle: Attribute.Blocks;
+    blogListItems: Attribute.Component<'blocks.blog-list-comp', true>;
+  };
+}
+
 export interface SectionsBranchLocators extends Schema.Component {
   collectionName: 'components_sections_branch_locators';
   info: {
@@ -730,6 +758,7 @@ export interface SectionsStickyMenu extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'blocks.blog-list-comp': BlocksBlogListComp;
       'blocks.calculator-link': BlocksCalculatorLink;
       'blocks.card-child': BlocksCardChild;
       'blocks.card-parent': BlocksCardParent;
@@ -776,6 +805,7 @@ declare module '@strapi/types' {
       'headers.top-nav-links': HeadersTopNavLinks;
       'headers.top-nav-tab': HeadersTopNavTab;
       'headers.top-navigation': HeadersTopNavigation;
+      'sections.blogs': SectionsBlogs;
       'sections.branch-locators': SectionsBranchLocators;
       'sections.cta-banner': SectionsCtaBanner;
       'sections.cust-satis-carousel': SectionsCustSatisCarousel;
