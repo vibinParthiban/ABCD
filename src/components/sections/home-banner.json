@@ -18,6 +18,11 @@
       "type": "component",
       "repeatable": true,
       "component": "blocks.image-carousel"
+    },
+    "BannerForm": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.banner-form"
     }
   }
 }

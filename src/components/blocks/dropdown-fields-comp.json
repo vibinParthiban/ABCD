@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_blocks_dropdown_fields_comps",
+  "info": {
+    "displayName": "DropdownFieldsComp"
+  },
+  "options": {},
+  "attributes": {
+    "Label": {
+      "type": "string"
+    },
+    "GroupNumber": {
+      "type": "integer"
+    },
+    "KeyValue": {
+      "type": "string"
+    },
+    "Icon": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.icon"
+    },
+    "Key": {
+      "type": "string"
+    },
+    "ProductCategory": {
+      "type": "string"
+    },
+    "ProductName": {
+      "type": "string"
+    },
+    "LOB": {
+      "type": "string"
+    }
+  }
+}
