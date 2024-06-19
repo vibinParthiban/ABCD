@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_blocks_banner_forms",
+  "info": {
+    "displayName": "BannerForm"
+  },
+  "options": {},
+  "attributes": {
+    "Heading": {
+      "type": "string"
+    },
+    "SubHeading": {
+      "type": "string"
+    },
+    "ProductDropdown": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.product-dropdown"
+    },
+    "TermsnCondition": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.link"
+    }
+  }
+}

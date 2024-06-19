@@ -1,5 +1,18 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface BlocksBannerForm extends Schema.Component {
+  collectionName: 'components_blocks_banner_forms';
+  info: {
+    displayName: 'BannerForm';
+  };
+  attributes: {
+    Heading: Attribute.String;
+    SubHeading: Attribute.String;
+    ProductDropdown: Attribute.Component<'blocks.product-dropdown', true>;
+    TermsnCondition: Attribute.Component<'blocks.link'>;
+  };
+}
+
 export interface BlocksBlogListComp extends Schema.Component {
   collectionName: 'components_blocks_blog_list_comps';
   info: {
@@ -81,6 +94,23 @@ export interface BlocksCta extends Schema.Component {
     title: Attribute.Text;
     class: Attribute.String;
     typename: Attribute.String;
+  };
+}
+
+export interface BlocksDropdownFieldsComp extends Schema.Component {
+  collectionName: 'components_blocks_dropdown_fields_comps';
+  info: {
+    displayName: 'DropdownFieldsComp';
+  };
+  attributes: {
+    Label: Attribute.String;
+    GroupNumber: Attribute.Integer;
+    KeyValue: Attribute.String;
+    Icon: Attribute.Component<'blocks.icon'>;
+    Key: Attribute.String;
+    ProductCategory: Attribute.String;
+    ProductName: Attribute.String;
+    LOB: Attribute.String;
   };
 }
 
@@ -238,6 +268,19 @@ export interface BlocksProdSubCategory extends Schema.Component {
     primaryCTAButton: Attribute.Component<'blocks.cta'>;
     secondaryCTAButton: Attribute.Component<'blocks.cta'>;
     accordionClass: Attribute.Component<'blocks.field-type'>;
+  };
+}
+
+export interface BlocksProductDropdown extends Schema.Component {
+  collectionName: 'components_blocks_product_dropdowns';
+  info: {
+    displayName: 'ProductDropdown';
+  };
+  attributes: {
+    url: Attribute.String;
+    name: Attribute.String;
+    displayName: Attribute.String;
+    fields: Attribute.Component<'blocks.dropdown-fields-comp'>;
   };
 }
 
@@ -742,6 +785,7 @@ export interface SectionsHomeBanner extends Schema.Component {
     cssclass: Attribute.String;
     infoGraph: Attribute.Blocks;
     carouselItems: Attribute.Component<'blocks.image-carousel', true>;
+    BannerForm: Attribute.Component<'blocks.banner-form'>;
   };
 }
 
@@ -758,11 +802,13 @@ export interface SectionsStickyMenu extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'blocks.banner-form': BlocksBannerForm;
       'blocks.blog-list-comp': BlocksBlogListComp;
       'blocks.calculator-link': BlocksCalculatorLink;
       'blocks.card-child': BlocksCardChild;
       'blocks.card-parent': BlocksCardParent;
       'blocks.cta': BlocksCta;
+      'blocks.dropdown-fields-comp': BlocksDropdownFieldsComp;
       'blocks.field-type': BlocksFieldType;
       'blocks.fields-img-carousel': BlocksFieldsImgCarousel;
       'blocks.flyers': BlocksFlyers;
@@ -775,6 +821,7 @@ declare module '@strapi/types' {
       'blocks.mobile-only': BlocksMobileOnly;
       'blocks.prod-recommendation': BlocksProdRecommendation;
       'blocks.prod-sub-category': BlocksProdSubCategory;
+      'blocks.product-dropdown': BlocksProductDropdown;
       'blocks.quick-link': BlocksQuickLink;
       'blocks.related-read': BlocksRelatedRead;
       'blocks.sticky-menu-item': BlocksStickyMenuItem;

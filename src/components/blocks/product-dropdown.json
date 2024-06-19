@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_blocks_product_dropdowns",
+  "info": {
+    "displayName": "ProductDropdown"
+  },
+  "options": {},
+  "attributes": {
+    "url": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "displayName": {
+      "type": "string"
+    },
+    "fields": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.dropdown-fields-comp"
+    }
+  }
+}
