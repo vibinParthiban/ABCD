@@ -667,6 +667,28 @@ export interface SectionsCustSatisCarousel extends Schema.Component {
   };
 }
 
+export interface SectionsDiscoverSection extends Schema.Component {
+  collectionName: 'components_sections_discover_sections';
+  info: {
+    displayName: 'DiscoverSection';
+  };
+  attributes: {
+    dcAppBarImg: Attribute.Component<'blocks.image'>;
+    backgroundImage: Attribute.Component<'blocks.image'>;
+    heading1: Attribute.String;
+    heading2: Attribute.String;
+    cssclass: Attribute.String;
+    subheading1: Attribute.String;
+    qrcodeText: Attribute.String;
+    appDownloadHeading: Attribute.String;
+    mobileAppImg: Attribute.Component<'blocks.image'>;
+    appleStoreImg: Attribute.Component<'blocks.image'>;
+    appleStoreCTAButton: Attribute.Component<'blocks.cta'>;
+    playStoreCTAButton: Attribute.Component<'blocks.cta'>;
+    playStoreImg: Attribute.Component<'blocks.image'>;
+  };
+}
+
 export interface SectionsFinanceSolution extends Schema.Component {
   collectionName: 'components_sections_finance_solutions';
   info: {
@@ -757,6 +779,7 @@ declare module '@strapi/types' {
       'sections.branch-locators': SectionsBranchLocators;
       'sections.cta-banner': SectionsCtaBanner;
       'sections.cust-satis-carousel': SectionsCustSatisCarousel;
+      'sections.discover-section': SectionsDiscoverSection;
       'sections.finance-solution': SectionsFinanceSolution;
       'sections.home-banner': SectionsHomeBanner;
       'sections.sticky-menu': SectionsStickyMenu;

@@ -1,0 +1,267 @@
+{
+  "kind": "singleType",
+  "collectionName": "dictionaries",
+  "info": {
+    "singularName": "dictionary",
+    "pluralName": "dictionaries",
+    "displayName": "Dictionary"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+   "AgreeText": {
+      "type": "text"
+    },
+    "ApplyNow": {
+      "type": "text"
+    },
+    "AppStore": {
+      "type": "text"
+    },
+    "BrowserWarning": {
+      "type": "text"
+    },
+    "ChangeNumber": {
+      "type": "text"
+    },
+    "CM": {
+      "type": "text"
+    },
+    "CodeExpiresIn": {
+      "type": "text"
+    },
+    "CodeExpiresInSeconds": {
+      "type": "text"
+    },
+    "ContactNumber": {
+      "type": "text"
+    },
+    "CountryCode": {
+      "type": "text"
+    },
+    "Documentation": {
+      "type": "text"
+    },
+    "ELIGIBLE_LOAN": {
+      "type": "text"
+    },
+    "ELIGIBLE_LOAN_AMOUNT": {
+      "type": "text"
+    },
+    "EMI": {
+      "type": "text"
+    },
+    "EnqurieNow": {
+      "type": "text"
+    },
+    "Enter": {
+      "type": "text"
+    },
+    "EnterName": {
+      "type": "text"
+    },
+    "EnterPhone": {
+      "type": "text"
+    },
+    "ExploreNow": {
+      "type": "text"
+    },
+    "ExploreProducts": {
+      "type": "text"
+    },
+    "Feet": {
+      "type": "text"
+    },
+    "FormPlaceholderEmail": {
+      "type": "text"
+    },
+    "FormPlaceholderFullName": {
+      "type": "text"
+    },
+    "FormPlaceholderPhoneNumber": {
+      "type": "text"
+    },
+    "FormPlaceholderPinCode": {
+      "type": "text"
+    },
+    "FullName": {
+      "type": "text"
+    },
+    "GraphQL": {
+      "type": "text"
+    },
+    "HowFast": {
+      "type": "text"
+    },
+    "Inches": {
+      "type": "text"
+    },
+    "Interest": {
+      "type": "text"
+    },
+    "InvalidOTP": {
+      "type": "text"
+    },
+    "InvalidPhone": {
+      "type": "text"
+    },
+    "InvestNow": {
+      "type": "text"
+    },
+    "IsPopular": {
+      "type": "text"
+    },
+    "KG": {
+      "type": "text"
+    },
+    "KgM2": {
+      "type": "text"
+    },
+    "KnowMore": {
+      "type": "text"
+    },
+    "LMServiceError": {
+      "type": "text"
+    },
+    "LoadMore": {
+      "type": "text"
+    },
+    "LOAN_AMOUNT": {
+      "type": "text"
+    },
+    "MinRead": {
+      "type": "text"
+    },
+    "NotifyMe": {
+      "type": "text"
+    },
+    "OTPButton": {
+      "type": "text"
+    },
+    "OTPError": {
+      "type": "text"
+    },
+    "OTPServiceError": {
+      "type": "text"
+    },
+    "OTPVerification": {
+      "type": "text"
+    },
+    "OTPVerificationMessage": {
+      "type": "text"
+    },
+    "OurCompanies": {
+      "type": "text"
+    },
+    "Payout": {
+      "type": "text"
+    },
+    "PlayStore": {
+      "type": "text"
+    },
+    "PopularProducts": {
+      "type": "text"
+    },
+    "Pound": {
+      "type": "text"
+    },
+    "Pounds": {
+      "type": "text"
+    },
+    "Principle": {
+      "type": "text"
+    },
+    "query_param_leadId": {
+      "type": "text"
+    },
+    "query_param_lob": {
+      "type": "text"
+    },
+    "query_param_mobile_number": {
+      "type": "text"
+    },
+    "query_param_product": {
+      "type": "text"
+    },
+    "query_param_user_name": {
+      "type": "text"
+    },
+    "RecommendedForYou": {
+      "type": "text"
+    },
+    "Redirecting": {
+      "type": "text"
+    },
+    "ResendOtp": {
+      "type": "text"
+    },
+    "Rupee_Sign": {
+      "type": "text"
+    },
+    "SearchBoxPlaceholder": {
+      "type": "text"
+    },
+    "Seconds": {
+      "type": "text"
+    },
+    "SendAppLink": {
+      "type": "text"
+    },
+    "SendOTP": {
+      "type": "text"
+    },
+    "SideMenuConnectWithUs": {
+      "type": "text"
+    },
+    "SideMenuSubTitle": {
+      "type": "text"
+    },
+    "StartSipNow": {
+      "type": "text"
+    },
+    "Stay": {
+      "type": "text"
+    },
+    "STEP": {
+      "type": "text"
+    },
+    "Styleguide": {
+      "type": "text"
+    },
+    "styleguideSample": {
+      "type": "text"
+    },
+    "SUBSIDYAMOUNT": {
+      "type": "text"
+    },
+    "TableContents": {
+      "type": "text"
+    },
+    "TermnCondition": {
+      "type": "text"
+    },
+    "THANKYOUMESSAGE_1": {
+      "type": "text"
+    },
+    "ThankMessage1": {
+      "type": "text"
+    },
+    "ThankMessage2": {
+      "type": "text"
+    },
+    "VerificationCodeExpire": {
+      "type": "text"
+    },
+    "Verifying": {
+      "type": "text"
+    },
+    "VerifyOTP": {
+      "type": "text"
+    },
+    "ViewAllCalculators": {
+      "type": "text"
+    }
+  }
+}

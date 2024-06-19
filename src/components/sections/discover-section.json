@@ -1,0 +1,62 @@
+{
+  "collectionName": "components_sections_discover_sections",
+  "info": {
+    "displayName": "DiscoverSection"
+  },
+  "options": {},
+  "attributes": {
+    "dcAppBarImg": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.image"
+    },
+    "backgroundImage": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.image"
+    },
+    "heading1": {
+      "type": "string"
+    },
+    "heading2": {
+      "type": "string"
+    },
+    "cssclass": {
+      "type": "string"
+    },
+    "subheading1": {
+      "type": "string"
+    },
+    "qrcodeText": {
+      "type": "string"
+    },
+    "appDownloadHeading": {
+      "type": "string"
+    },
+    "mobileAppImg": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.image"
+    },
+    "appleStoreImg": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.image"
+    },
+    "appleStoreCTAButton": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.cta"
+    },
+    "playStoreCTAButton": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.cta"
+    },
+    "playStoreImg": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.image"
+    }
+  }
+}
