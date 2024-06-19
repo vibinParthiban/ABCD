@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_blocks_blog_list_comps",
+  "info": {
+    "displayName": "blogListComp"
+  },
+  "options": {},
+  "attributes": {
+    "link": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string"
+    },
+    "time_to_read": {
+      "type": "string"
+    }
+  }
+}

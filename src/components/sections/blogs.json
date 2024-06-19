@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_sections_blogs",
+  "info": {
+    "displayName": "Blogs"
+  },
+  "options": {},
+  "attributes": {
+    "viewAllBlogsText": {
+      "type": "string"
+    },
+    "viewAllBlogsLink": {
+      "type": "string"
+    },
+    "minReadText": {
+      "type": "string"
+    },
+    "sectionTitle": {
+      "type": "blocks"
+    },
+    "blogListItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.blog-list-comp"
+    }
+  }
+}
