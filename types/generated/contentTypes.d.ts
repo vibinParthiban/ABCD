@@ -788,6 +788,119 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiDictionaryDictionary extends Schema.SingleType {
+  collectionName: 'dictionaries';
+  info: {
+    singularName: 'dictionary';
+    pluralName: 'dictionaries';
+    displayName: 'Dictionary';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    AgreeText: Attribute.Text;
+    ApplyNow: Attribute.Text;
+    AppStore: Attribute.Text;
+    BrowserWarning: Attribute.Text;
+    ChangeNumber: Attribute.Text;
+    CM: Attribute.Text;
+    CodeExpiresIn: Attribute.Text;
+    CodeExpiresInSeconds: Attribute.Text;
+    ContactNumber: Attribute.Text;
+    CountryCode: Attribute.Text;
+    Documentation: Attribute.Text;
+    ELIGIBLE_LOAN: Attribute.Text;
+    ELIGIBLE_LOAN_AMOUNT: Attribute.Text;
+    EMI: Attribute.Text;
+    EnqurieNow: Attribute.Text;
+    Enter: Attribute.Text;
+    EnterName: Attribute.Text;
+    EnterPhone: Attribute.Text;
+    ExploreNow: Attribute.Text;
+    ExploreProducts: Attribute.Text;
+    Feet: Attribute.Text;
+    FormPlaceholderEmail: Attribute.Text;
+    FormPlaceholderFullName: Attribute.Text;
+    FormPlaceholderPhoneNumber: Attribute.Text;
+    FormPlaceholderPinCode: Attribute.Text;
+    FullName: Attribute.Text;
+    GraphQL: Attribute.Text;
+    HowFast: Attribute.Text;
+    Inches: Attribute.Text;
+    Interest: Attribute.Text;
+    InvalidOTP: Attribute.Text;
+    InvalidPhone: Attribute.Text;
+    InvestNow: Attribute.Text;
+    IsPopular: Attribute.Text;
+    KG: Attribute.Text;
+    KgM2: Attribute.Text;
+    KnowMore: Attribute.Text;
+    LMServiceError: Attribute.Text;
+    LoadMore: Attribute.Text;
+    LOAN_AMOUNT: Attribute.Text;
+    MinRead: Attribute.Text;
+    NotifyMe: Attribute.Text;
+    OTPButton: Attribute.Text;
+    OTPError: Attribute.Text;
+    OTPServiceError: Attribute.Text;
+    OTPVerification: Attribute.Text;
+    OTPVerificationMessage: Attribute.Text;
+    OurCompanies: Attribute.Text;
+    Payout: Attribute.Text;
+    PlayStore: Attribute.Text;
+    PopularProducts: Attribute.Text;
+    Pound: Attribute.Text;
+    Pounds: Attribute.Text;
+    Principle: Attribute.Text;
+    query_param_leadId: Attribute.Text;
+    query_param_lob: Attribute.Text;
+    query_param_mobile_number: Attribute.Text;
+    query_param_product: Attribute.Text;
+    query_param_user_name: Attribute.Text;
+    RecommendedForYou: Attribute.Text;
+    Redirecting: Attribute.Text;
+    ResendOtp: Attribute.Text;
+    Rupee_Sign: Attribute.Text;
+    SearchBoxPlaceholder: Attribute.Text;
+    Seconds: Attribute.Text;
+    SendAppLink: Attribute.Text;
+    SendOTP: Attribute.Text;
+    SideMenuConnectWithUs: Attribute.Text;
+    SideMenuSubTitle: Attribute.Text;
+    StartSipNow: Attribute.Text;
+    Stay: Attribute.Text;
+    STEP: Attribute.Text;
+    Styleguide: Attribute.Text;
+    styleguideSample: Attribute.Text;
+    SUBSIDYAMOUNT: Attribute.Text;
+    TableContents: Attribute.Text;
+    TermnCondition: Attribute.Text;
+    THANKYOUMESSAGE_1: Attribute.Text;
+    ThankMessage1: Attribute.Text;
+    ThankMessage2: Attribute.Text;
+    VerificationCodeExpire: Attribute.Text;
+    Verifying: Attribute.Text;
+    VerifyOTP: Attribute.Text;
+    ViewAllCalculators: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::dictionary.dictionary',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::dictionary.dictionary',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiFooterFooter extends Schema.CollectionType {
   collectionName: 'footers';
   info: {
@@ -902,7 +1015,8 @@ export interface ApiPagePage extends Schema.CollectionType {
         'sections.finance-solution',
         'sections.branch-locators',
         'sections.sticky-menu',
-        'sections.home-banner'
+        'sections.home-banner',
+        'sections.discover-section'
       ]
     >;
     createdAt: Attribute.DateTime;
@@ -933,6 +1047,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::dictionary.dictionary': ApiDictionaryDictionary;
       'api::footer.footer': ApiFooterFooter;
       'api::header.header': ApiHeaderHeader;
       'api::home.home': ApiHomeHome;
