@@ -1016,7 +1016,8 @@ export interface ApiPagePage extends Schema.CollectionType {
         'sections.branch-locators',
         'sections.sticky-menu',
         'sections.home-banner',
-        'sections.discover-section'
+        'sections.discover-section',
+        'sections.blogs'
       ]
     >;
     createdAt: Attribute.DateTime;
