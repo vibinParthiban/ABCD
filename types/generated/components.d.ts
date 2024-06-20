@@ -88,7 +88,6 @@ export interface BlocksCta extends Schema.Component {
   attributes: {
     href: Attribute.Text;
     text: Attribute.String;
-    linktype: Attribute.String;
     url: Attribute.Text;
     anchor: Attribute.Text;
     title: Attribute.Text;
@@ -208,7 +207,6 @@ export interface BlocksImage extends Schema.Component {
     alt: Attribute.String;
     width: Attribute.Integer;
     height: Attribute.Integer;
-    typename: Attribute.String;
     image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
@@ -232,7 +230,6 @@ export interface BlocksLink extends Schema.Component {
   attributes: {
     url: Attribute.Text;
     text: Attribute.String;
-    linkType: Attribute.Enumeration<['internal', 'external']>;
   };
 }
 
@@ -567,7 +564,6 @@ export interface HeadersMenuItem extends Schema.Component {
     menuLink: Attribute.Text;
     menuIcon: Attribute.Text;
     mobileOnly: Attribute.Boolean & Attribute.DefaultTo<false>;
-    CssClassName: Attribute.String;
     menuTabs: Attribute.Component<'headers.menu-tabs', true>;
   };
 }
@@ -580,9 +576,6 @@ export interface HeadersMenuTabs extends Schema.Component {
   attributes: {
     menuTitle: Attribute.String;
     menuLink: Attribute.Text;
-    viewAllLink: Attribute.Text;
-    CssId: Attribute.String;
-    yellowSubTab: Attribute.String;
     menuCards: Attribute.Component<'headers.menu-card', true>;
     calculatorLinks: Attribute.Component<'blocks.calculator-link', true>;
     relatedReads: Attribute.Component<'blocks.related-read', true>;
