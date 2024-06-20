@@ -12,9 +12,6 @@
     "text": {
       "type": "string"
     },
-    "linktype": {
-      "type": "string"
-    },
     "url": {
       "type": "text"
     },
