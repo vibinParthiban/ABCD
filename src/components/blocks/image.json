@@ -19,9 +19,6 @@
     "height": {
       "type": "integer"
     },
-    "typename": {
-      "type": "string"
-    },
     "image": {
       "allowedTypes": [
         "images",

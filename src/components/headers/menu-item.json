@@ -18,9 +18,6 @@
       "type": "boolean",
       "default": false
     },
-    "CssClassName": {
-      "type": "string"
-    },
     "menuTabs": {
       "type": "component",
       "repeatable": true,

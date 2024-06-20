@@ -11,15 +11,6 @@
     "menuLink": {
       "type": "text"
     },
-    "viewAllLink": {
-      "type": "text"
-    },
-    "CssId": {
-      "type": "string"
-    },
-    "yellowSubTab": {
-      "type": "string"
-    },
     "menuCards": {
       "type": "component",
       "repeatable": true,

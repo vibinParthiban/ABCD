@@ -11,13 +11,6 @@
     },
     "text": {
       "type": "string"
-    },
-    "linkType": {
-      "type": "enumeration",
-      "enum": [
-        "internal",
-        "external"
-      ]
     }
   }
 }
