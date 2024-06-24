@@ -326,42 +326,6 @@ export interface BlocksVideoCarousel extends Schema.Component {
   };
 }
 
-export interface HeadersClickableItem extends Schema.Component {
-  collectionName: 'components_headers_clickable_items';
-  info: {
-    displayName: 'ClickableItem';
-  };
-  attributes: {
-    Label: Attribute.Component<'blocks.label'>;
-    Icon: Attribute.Component<'blocks.icon'>;
-    CTA: Attribute.Component<'blocks.cta'>;
-    CssClass: Attribute.Component<'blocks.label'>;
-  };
-}
-
-export interface HeadersHeadRightSide extends Schema.Component {
-  collectionName: 'components_headers_head_right_sides';
-  info: {
-    displayName: 'headRightSide';
-  };
-  attributes: {
-    HeadRightItems: Attribute.Component<'headers.clickable-item', true>;
-  };
-}
-
-export interface HeadersLogo extends Schema.Component {
-  collectionName: 'components_headers_logos';
-  info: {
-    displayName: 'logo';
-    icon: 'picture';
-  };
-  attributes: {
-    CompanyName: Attribute.Component<'blocks.label'>;
-    Icon: Attribute.Component<'blocks.icon'>;
-    Link: Attribute.Component<'blocks.link'>;
-  };
-}
-
 export interface FootersCompanies extends Schema.Component {
   collectionName: 'components_footers_companies';
   info: {
@@ -467,6 +431,42 @@ export interface FootersTabsComp extends Schema.Component {
   attributes: {
     name: Attribute.String;
     primary: Attribute.Component<'footers.tab-primary', true>;
+  };
+}
+
+export interface HeadersClickableItem extends Schema.Component {
+  collectionName: 'components_headers_clickable_items';
+  info: {
+    displayName: 'ClickableItem';
+  };
+  attributes: {
+    Label: Attribute.Component<'blocks.label'>;
+    Icon: Attribute.Component<'blocks.icon'>;
+    CTA: Attribute.Component<'blocks.cta'>;
+    CssClass: Attribute.Component<'blocks.label'>;
+  };
+}
+
+export interface HeadersHeadRightSide extends Schema.Component {
+  collectionName: 'components_headers_head_right_sides';
+  info: {
+    displayName: 'headRightSide';
+  };
+  attributes: {
+    HeadRightItems: Attribute.Component<'headers.clickable-item', true>;
+  };
+}
+
+export interface HeadersLogo extends Schema.Component {
+  collectionName: 'components_headers_logos';
+  info: {
+    displayName: 'logo';
+    icon: 'picture';
+  };
+  attributes: {
+    CompanyName: Attribute.Component<'blocks.label'>;
+    Icon: Attribute.Component<'blocks.icon'>;
+    Link: Attribute.Component<'blocks.link'>;
   };
 }
 
@@ -709,9 +709,6 @@ declare module '@strapi/types' {
       'blocks.target-type-two': BlocksTargetTypeTwo;
       'blocks.title': BlocksTitle;
       'blocks.video-carousel': BlocksVideoCarousel;
-      'headers.clickable-item': HeadersClickableItem;
-      'headers.head-right-side': HeadersHeadRightSide;
-      'headers.logo': HeadersLogo;
       'footers.companies': FootersCompanies;
       'footers.follow-comp': FootersFollowComp;
       'footers.follow-parent': FootersFollowParent;
@@ -720,6 +717,9 @@ declare module '@strapi/types' {
       'footers.icon-and-url': FootersIconAndUrl;
       'footers.tab-primary': FootersTabPrimary;
       'footers.tabs-comp': FootersTabsComp;
+      'headers.clickable-item': HeadersClickableItem;
+      'headers.head-right-side': HeadersHeadRightSide;
+      'headers.logo': HeadersLogo;
       'headers.menu-card': HeadersMenuCard;
       'headers.menu-item': HeadersMenuItem;
       'headers.menu-tabs': HeadersMenuTabs;

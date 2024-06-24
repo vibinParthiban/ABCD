@@ -788,40 +788,6 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
-export interface ApiHeaderHeader extends Schema.CollectionType {
-  collectionName: 'headers';
-  info: {
-    singularName: 'header';
-    pluralName: 'headers';
-    displayName: 'header';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    CompanyLogo: Attribute.Component<'headers.logo'>;
-    MainMenu: Attribute.Component<'headers.menu'>;
-    TopNavigation: Attribute.Component<'headers.top-navigation'>;
-    QuickServices: Attribute.Component<'headers.quick-services'>;
-    HeaderRightside: Attribute.Component<'headers.head-right-side'>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::header.header',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::header.header',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface ApiFooterFooter extends Schema.CollectionType {
   collectionName: 'footers';
   info: {
@@ -856,6 +822,40 @@ export interface ApiFooterFooter extends Schema.CollectionType {
   };
 }
 
+export interface ApiHeaderHeader extends Schema.CollectionType {
+  collectionName: 'headers';
+  info: {
+    singularName: 'header';
+    pluralName: 'headers';
+    displayName: 'header';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    CompanyLogo: Attribute.Component<'headers.logo'>;
+    MainMenu: Attribute.Component<'headers.menu'>;
+    TopNavigation: Attribute.Component<'headers.top-navigation'>;
+    QuickServices: Attribute.Component<'headers.quick-services'>;
+    HeaderRightside: Attribute.Component<'headers.head-right-side'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::header.header',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::header.header',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiHomeHome extends Schema.SingleType {
   collectionName: 'homes';
   info: {
@@ -877,6 +877,38 @@ export interface ApiHomeHome extends Schema.SingleType {
     createdBy: Attribute.Relation<'api::home.home', 'oneToOne', 'admin::user'> &
       Attribute.Private;
     updatedBy: Attribute.Relation<'api::home.home', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
+export interface ApiImageUrlOnlyTestImageUrlOnlyTest
+  extends Schema.CollectionType {
+  collectionName: 'image_url_only_tests';
+  info: {
+    singularName: 'image-url-only-test';
+    pluralName: 'image-url-only-tests';
+    displayName: 'ImageUrlOnlyTest';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    ImageName: Attribute.String;
+    ImageUrl: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::image-url-only-test.image-url-only-test',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::image-url-only-test.image-url-only-test',
+      'oneToOne',
+      'admin::user'
+    > &
       Attribute.Private;
   };
 }
@@ -933,9 +965,10 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
-      'api::header.header': ApiHeaderHeader;
       'api::footer.footer': ApiFooterFooter;
+      'api::header.header': ApiHeaderHeader;
       'api::home.home': ApiHomeHome;
+      'api::image-url-only-test.image-url-only-test': ApiImageUrlOnlyTestImageUrlOnlyTest;
       'api::page.page': ApiPagePage;
     }
   }

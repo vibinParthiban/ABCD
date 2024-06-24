@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "image_url_only_tests",
+  "info": {
+    "singularName": "image-url-only-test",
+    "pluralName": "image-url-only-tests",
+    "displayName": "ImageUrlOnlyTest"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ImageName": {
+      "type": "string"
+    },
+    "ImageUrl": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}
