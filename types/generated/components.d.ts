@@ -564,6 +564,7 @@ export interface HeadersMenuItem extends Schema.Component {
     menuLink: Attribute.Text;
     menuIcon: Attribute.Text;
     mobileOnly: Attribute.Boolean & Attribute.DefaultTo<false>;
+    cssClassName: Attribute.Text;
     menuTabs: Attribute.Component<'headers.menu-tabs', true>;
   };
 }
@@ -576,6 +577,9 @@ export interface HeadersMenuTabs extends Schema.Component {
   attributes: {
     menuTitle: Attribute.String;
     menuLink: Attribute.Text;
+    CssId: Attribute.Text;
+    yellowSubTab: Attribute.Text;
+    viewAllLink: Attribute.Component<'blocks.link'>;
     menuCards: Attribute.Component<'headers.menu-card', true>;
     calculatorLinks: Attribute.Component<'blocks.calculator-link', true>;
     relatedReads: Attribute.Component<'blocks.related-read', true>;
