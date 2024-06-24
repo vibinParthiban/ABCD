@@ -1,7 +1,8 @@
 {
   "collectionName": "components_footers_footer_infos",
   "info": {
-    "displayName": "FooterInfo"
+    "displayName": "FooterInfo",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -22,15 +23,6 @@
       "type": "component",
       "repeatable": false,
       "component": "footers.icon-and-url"
-    },
-    "Address": {
-      "type": "blocks"
-    },
-    "WarningText": {
-      "type": "blocks"
-    },
-    "RedRibonText": {
-      "type": "blocks"
     },
     "SubsidiariesTitle": {
       "type": "string"
@@ -56,6 +48,15 @@
     },
     "PlayStoreIcon": {
       "type": "string"
+    },
+    "Address": {
+      "type": "richtext"
+    },
+    "WarningText": {
+      "type": "richtext"
+    },
+    "RedRibonText": {
+      "type": "richtext"
     }
   }
 }
