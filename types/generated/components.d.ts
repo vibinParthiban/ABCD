@@ -437,6 +437,7 @@ export interface FootersFooterInfo extends Schema.Component {
   collectionName: 'components_footers_footer_infos';
   info: {
     displayName: 'FooterInfo';
+    description: '';
   };
   attributes: {
     Logo: Attribute.String;
@@ -444,9 +445,6 @@ export interface FootersFooterInfo extends Schema.Component {
     Icon: Attribute.String;
     TollText: Attribute.String;
     IconCTA: Attribute.Component<'footers.icon-and-url'>;
-    Address: Attribute.Blocks;
-    WarningText: Attribute.Blocks;
-    RedRibonText: Attribute.Blocks;
     SubsidiariesTitle: Attribute.String;
     DownloadText: Attribute.String;
     DownloadIcon: Attribute.String;
@@ -454,6 +452,9 @@ export interface FootersFooterInfo extends Schema.Component {
     AppStoreIcon: Attribute.String;
     PlayStore: Attribute.Component<'footers.icon-and-url'>;
     PlayStoreIcon: Attribute.String;
+    Address: Attribute.RichText;
+    WarningText: Attribute.RichText;
+    RedRibonText: Attribute.RichText;
   };
 }
 
