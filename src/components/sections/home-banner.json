@@ -12,7 +12,9 @@
       "type": "string"
     },
     "infoGraph": {
-      "type": "blocks"
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.text-with-sub-text"
     },
     "carouselItems": {
       "type": "component",

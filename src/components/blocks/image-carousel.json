@@ -14,11 +14,42 @@
     "displayName": {
       "type": "string"
     },
-    "fields": {
+    "Heading": {
       "type": "component",
       "repeatable": false,
-      "component": "blocks.fields-img-carousel"
+      "component": "blocks.text-with-sub-text"
+    },
+    "Subheading": {
+      "type": "string"
+    },
+    "BannerImage": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.image"
+    },
+    "Infograph": {
+      "type": "string"
+    },
+    "ButtonCTA": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.cta"
+    },
+    "CssClass": {
+      "type": "string"
+    },
+    "VideoLink": {
+      "type": "string"
+    },
+    "VideoBGImage": {
+      "type": "string"
+    },
+    "PlayIcon": {
+      "type": "string"
+    },
+    "VideoText": {
+      "type": "string"
     }
-    
+
   }
 }

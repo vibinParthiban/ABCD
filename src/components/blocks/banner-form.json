@@ -20,6 +20,11 @@
       "type": "component",
       "repeatable": false,
       "component": "blocks.link"
+    },
+    "ThankYouIcon":{
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.link"
     }
   }
 }

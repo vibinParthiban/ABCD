@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_blocks_text_with_sub_texts",
+  "info": {
+    "displayName": "TextWithSubText"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "richtext"
+    },
+    "smallText": {
+      "type": "string"
+    }
+  }
+}

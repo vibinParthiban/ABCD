@@ -10,6 +10,7 @@ export interface BlocksBannerForm extends Schema.Component {
     SubHeading: Attribute.String;
     ProductDropdown: Attribute.Component<'blocks.product-dropdown', true>;
     TermsnCondition: Attribute.Component<'blocks.link'>;
+    ThankYouIcon: Attribute.Component<'blocks.link'>;
   };
 }
 
@@ -191,7 +192,16 @@ export interface BlocksImageCarousel extends Schema.Component {
     url: Attribute.String;
     name: Attribute.String;
     displayName: Attribute.String;
-    fields: Attribute.Component<'blocks.fields-img-carousel'>;
+    Heading: Attribute.Component<'blocks.text-with-sub-text'>;
+    Subheading: Attribute.String;
+    BannerImage: Attribute.Component<'blocks.image'>;
+    Infograph: Attribute.String;
+    ButtonCTA: Attribute.Component<'blocks.cta'>;
+    CssClass: Attribute.String;
+    VideoLink: Attribute.String;
+    VideoBGImage: Attribute.String;
+    PlayIcon: Attribute.String;
+    VideoText: Attribute.String;
   };
 }
 
@@ -355,6 +365,17 @@ export interface BlocksTargetTypeTwo extends Schema.Component {
   attributes: {
     typename: Attribute.String;
     type: Attribute.Component<'blocks.field-type', true>;
+  };
+}
+
+export interface BlocksTextWithSubText extends Schema.Component {
+  collectionName: 'components_blocks_text_with_sub_texts';
+  info: {
+    displayName: 'TextWithSubText';
+  };
+  attributes: {
+    text: Attribute.RichText;
+    smallText: Attribute.String;
   };
 }
 
@@ -700,8 +721,8 @@ export interface SectionsBranchLocators extends Schema.Component {
     icon: 'pinMap';
   };
   attributes: {
-    heading: Attribute.Component<'blocks.title'> & Attribute.Required;
-    iframeUrl: Attribute.Component<'blocks.i-frame'>;
+    heading: Attribute.Text;
+    iframeUrl: Attribute.Text;
   };
 }
 
@@ -781,7 +802,7 @@ export interface SectionsHomeBanner extends Schema.Component {
   attributes: {
     heading: Attribute.String;
     cssclass: Attribute.String;
-    infoGraph: Attribute.Blocks;
+    infoGraph: Attribute.Component<'blocks.text-with-sub-text', true>;
     carouselItems: Attribute.Component<'blocks.image-carousel', true>;
     BannerForm: Attribute.Component<'blocks.banner-form'>;
   };
@@ -826,6 +847,7 @@ declare module '@strapi/types' {
       'blocks.target-items-type-two': BlocksTargetItemsTypeTwo;
       'blocks.target-items': BlocksTargetItems;
       'blocks.target-type-two': BlocksTargetTypeTwo;
+      'blocks.text-with-sub-text': BlocksTextWithSubText;
       'blocks.title': BlocksTitle;
       'blocks.video-carousel': BlocksVideoCarousel;
       'footers.companies': FootersCompanies;

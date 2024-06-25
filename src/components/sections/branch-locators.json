@@ -7,15 +7,10 @@
   "options": {},
   "attributes": {
     "heading": {
-      "type": "component",
-      "repeatable": false,
-      "component": "blocks.title",
-      "required": true
+      "type": "text"
     },
     "iframeUrl": {
-      "type": "component",
-      "repeatable": false,
-      "component": "blocks.i-frame"
+      "type": "text"
     }
   }
 }
