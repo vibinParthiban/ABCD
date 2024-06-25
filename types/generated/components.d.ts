@@ -287,7 +287,14 @@ export interface BlocksProductDropdown extends Schema.Component {
     url: Attribute.String;
     name: Attribute.String;
     displayName: Attribute.String;
-    fields: Attribute.Component<'blocks.dropdown-fields-comp'>;
+    Label: Attribute.String;
+    GroupNumber: Attribute.Integer;
+    KeyValue: Attribute.String;
+    Icon: Attribute.Component<'blocks.icon'>;
+    Key: Attribute.String;
+    ProductCategory: Attribute.String;
+    ProductName: Attribute.String;
+    LOB: Attribute.String;
   };
 }
 
